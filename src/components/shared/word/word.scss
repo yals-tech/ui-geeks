@@ -1,0 +1,23 @@
+@import '../../../scss/variables.scss';
+@import '../../../scss/colors.scss';
+
+.#{$appPrefix}-text {
+  line-height: 1.1em;
+}
+
+.#{$appPrefix}-text-bold {
+  font-weight: bold;
+}
+
+.#{$appPrefix}-text-italic {
+  font-style: italic;
+}
+
+.#{$appPrefix}-text-underline {
+  text-decoration: underline;
+}
+
+.#{$appPrefix}-text-highlight {
+  padding: 0 0.2rem 0 0.2rem;
+  background-color: $secondaryBgColor;
+}

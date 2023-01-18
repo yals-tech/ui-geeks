@@ -1,0 +1,28 @@
+@import '../../../scss/variables.scss';
+@import '../../../scss/colors.scss';
+
+.#{$appPrefix}-topic-info {
+  margin-top: 15px;
+  padding: 10px 0px 10px 15px;
+  color: $lightGrayAlt;
+  font-size: 0.8rem;
+
+  .info-text {
+    margin-left: 10px;
+  }
+}
+
+.device-type-mobile {
+  .#{$appPrefix}-topic-info {
+    padding-left: 0;
+    margin-bottom: 15px;
+  }
+}
+
+.#{$themeDark} {
+  .#{$appPrefix}-topic-info {
+    .info-text {
+      color: $primaryColor;
+    }
+  }
+}

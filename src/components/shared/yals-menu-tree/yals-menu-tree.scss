@@ -1,0 +1,92 @@
+@import '../../../scss/variables.scss';
+@import '../../../scss/colors.scss';
+
+.#{$appPrefix}-menu-tree {
+  padding: 10px;
+
+  h4.#{$appPrefix}-heading {
+    margin-bottom: 10px;
+  }
+
+  .#{$appPrefix}-navigate-btn {
+    display: block;
+    margin-bottom: 10px;
+
+    .no-link {
+      text-decoration: none;
+    }
+  }
+
+  .#{$appPrefix}-btn {
+    padding-left: 0px;
+    margin-bottom: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    color: $lightGrayAlt;
+
+    &:hover {
+      text-decoration: underline;
+      color: rgba(103, 106, 228, 1);
+    }
+  }
+}
+
+.device-type-mobile {
+  .#{$appPrefix}-menu-tree {
+    padding: 0px;
+    .row {
+      .#{$appPrefix}-navigate-btn {
+        background-color: $lightGray;
+        padding: 5px 0px 5px 10px;
+      }
+    }
+
+    .#{$appPrefix}-navigate-btn {
+      display: block;
+      padding: 5px 0px 5px 0px;
+      margin-bottom: 5px;
+      width: 100%;
+
+      .#{$appPrefix}-btn {
+        display: block;
+        margin-bottom: 0px;
+        color: rgba(103, 106, 228, 1);
+        font-size: 1.1rem;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+
+    h2 {
+      margin-top: 3rem;
+      margin-bottom: 0px;
+    }
+  }
+
+  .#{$themeDark} {
+    .#{$appPrefix}-menu-tree {
+      .row {
+        .#{$appPrefix}-navigate-btn {
+          background-color: #5c5c5c !important;
+          border-radius: 4px;
+          .#{$appPrefix}-btn {
+            color: #fbfbfb !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+.#{$themeDark} {
+  .#{$appPrefix}-menu-tree {
+    .row {
+      .#{$appPrefix}-navigate-btn {
+        .#{$appPrefix}-btn {
+          color: #fbfbfb !important;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+@import '../../../scss/variables.scss';
+@import '../../../scss/colors.scss';
+
+.#{$appPrefix}-share {
+  background-color: $lightGray;
+  border: 1px solid $secondaryBgColor;
+  padding: 5px 10px 5px 10px;
+  display: inline-block;
+
+  margin-top: 15px;
+  border-radius: 4px;
+
+  .share-text {
+    font-size: 0.8rem;
+    font-style: italic;
+    margin-right: 10px;
+    font-weight: bold;
+  }
+
+  .whatsapp-share {
+    display: inline-block;
+    margin-right: 10px;
+    height: 26px;
+  }
+
+  .fb-like {
+    margin-top: 10px;
+  }
+}
+
+.device-type-mobile {
+  .#{$appPrefix}-share {
+    margin-left: 0px;
+    margin-bottom: 15px;
+    width: 100%;
+  }
+}
+
+.#{$themeDark} {
+  .#{$appPrefix}-share {
+    background-color: $darkThemeBgAlt;
+    .share-text {
+      color: $darkThemeColor;
+    }
+  }
+}

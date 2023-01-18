@@ -1,0 +1,10 @@
+@import './colors.scss';
+
+$appPrefix: 'ui-geeks';
+$mobileDevice: 'device-type-mobile';
+
+$themeLight: 'theme-light';
+$themeDark: 'theme-dark';
+
+$errorBorder: 1px solid $error;
+$successBorder: 1px solid $success;

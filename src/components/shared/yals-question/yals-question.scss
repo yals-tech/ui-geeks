@@ -1,0 +1,51 @@
+@import '../../../scss/variables.scss';
+@import '../../../scss/colors.scss';
+
+.#{$appPrefix}-question {
+  padding: 10px;
+  border-radius: 4px;
+  background-color: $lightGray;
+  border: 1px solid $bodyBgColor;
+  margin-bottom: 5px;
+
+  // Hide the copy code button
+  .#{$appPrefix}-code {
+    button {
+      display: none;
+    }
+  }
+  .question {
+    font-size: 0.8rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+
+  .options {
+    cursor: pointer;
+    .#{$appPrefix}-check-radio {
+      margin-bottom: 3px;
+      font-size: 0.8rem;
+
+      input,
+      .form-check-label {
+        cursor: pointer;
+      }
+    }
+
+    .form-check-input:checked {
+      background-color: $purple;
+      border-color: $purple;
+    }
+
+    .form-check-input:focus {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+}
+
+.#{$themeDark} {
+  .#{$appPrefix}-question {
+    background-color: $darkThemeBg;
+  }
+}

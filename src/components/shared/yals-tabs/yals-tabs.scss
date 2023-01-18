@@ -1,0 +1,67 @@
+@import '../../../scss/variables.scss';
+@import '../../../scss/colors.scss';
+
+.#{$appPrefix}-tabs {
+  background-color: $demoBg;
+  border-radius: 2px;
+  .nav-tabs {
+    border-bottom: 1px solid $darkThemeColor;
+    font-size: 0.9rem;
+    .nav-link {
+      height: 30px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      padding-top: 3px;
+      &:hover {
+        border-color: transparent;
+        border-bottom: 1px solid $brightGreen;
+      }
+    }
+
+    .nav-link.active {
+      border-color: transparent;
+      border-bottom: 1px solid $purple;
+      background-color: transparent;
+    }
+  }
+
+  .tab-content {
+    padding: 10px 0px;
+    border-bottom: 1px solid $demoBg;
+    border-left: 1px solid $demoBg;
+    border-right: 1px solid $demoBg;
+  }
+
+  .#{$appPrefix}-code {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 0.9rem;
+  }
+}
+
+.#{$themeDark} {
+  .#{$appPrefix}-tabs {
+    border: 1px solid transparent;
+    background-color: $darkThemeBg;
+
+    .nav-tabs {
+      border-bottom: 1px solid $darkThemeBgAlt;
+
+      .nav-link.active {
+        color: $darkThemeColor;
+        background-color: $darkThemeBgAlt;
+        border-top-color: $darkThemeBgAlt;
+        border-left-color: $darkThemeBgAlt;
+        border-right-color: $darkThemeBgAlt;
+      }
+    }
+
+    .tab-content {
+      border: 1px solid transparent;
+    }
+
+    .nav-link {
+      color: $darkThemeColor;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+@import '../../../scss/variables.scss';
+@import '../../../scss/colors.scss';
+
+.#{$themeDark} {
+  .#{$appPrefix}-table {
+    th,
+    td {
+      color: $darkThemeColor !important;
+    }
+  }
+
+  .table-hover {
+    tr:nth-of-type(odd) > * {
+      background-color: $darkThemeBgAlt;
+    }
+
+    tr:nth-of-type(even) > * {
+      background-color: $darkThemeBg;
+    }
+  }
+}

@@ -1,0 +1,211 @@
+@import '../../../scss/variables.scss';
+@import '../../../scss/colors.scss';
+
+.#{$appPrefix}-time-line {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  position: relative;
+  width: 100%;
+
+  margin: 0 auto;
+  padding: 15px 0;
+  font-size: 0.8rem !important;
+  &::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background: $green;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1px;
+  }
+
+  .container {
+    padding: 10px 30px;
+    position: relative;
+    background: inherit;
+    width: 50%;
+  }
+
+  .container.left {
+    left: 0;
+    display: inline-block;
+  }
+
+  .container.right {
+    left: 25%;
+  }
+
+  .container::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: calc(50% - 8px);
+    right: -8px;
+    background: $green;
+    border: 2px solid $green;
+    border-radius: 16px;
+    z-index: 1;
+  }
+
+  .container.right::after {
+    left: -8px;
+  }
+
+  .container::before {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 2px;
+    top: calc(50% - 1px);
+    right: 8px;
+    background: $green;
+    z-index: 1;
+  }
+
+  .container.right::before {
+    left: 8px;
+  }
+
+  .container .timeStamp {
+    position: absolute;
+    display: inline-block;
+    top: calc(50% - 8px);
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: $purple;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    z-index: 1;
+  }
+
+  .container.left .timeStamp {
+    right: -110px;
+  }
+
+  .container.right .timeStamp {
+    left: -110px;
+  }
+
+  .container .milestone {
+    position: absolute;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    padding: 8px 0px;
+    top: calc(50% - 20px);
+    background: #5765c7;
+    border: 2px solid #5765c7;
+    border-radius: 40px;
+    text-align: center;
+    font-size: 18px;
+    color: #ffffff;
+    z-index: 1;
+    font-size: 0.8rem;
+  }
+
+  .container.left .milestone {
+    right: 56px;
+  }
+
+  .container.right .milestone {
+    left: 56px;
+  }
+
+  .container .content {
+    padding: 10px 90px 10px 15px;
+    background: $lightGray;
+    position: relative;
+    border-radius: 0 15px 15px 0;
+  }
+
+  .container.right .content {
+    padding: 10px 15px 10px 90px;
+    border-radius: 15px 0 0 15px;
+  }
+
+  .container .content h2 {
+    margin: 0 0 5px 0;
+    font-size: 18px;
+    font-size: 1rem;
+    font-weight: normal;
+    font-weight: bold;
+  }
+
+  .container .content p {
+    margin: 0;
+    line-height: 22px;
+    word-break: break-word;
+  }
+
+  @media (max-width: 767.98px) {
+    &::after {
+      left: 90px;
+    }
+
+    .container {
+      width: 100%;
+      padding-left: 120px;
+      padding-right: 30px;
+    }
+
+    .container.right {
+      left: 0%;
+      margin-left: 0;
+    }
+
+    .container.left::after,
+    .container.right::after {
+      left: 82px;
+    }
+
+    .container.left::before,
+    .container.right::before {
+      left: 98px;
+      border-color: transparent #006e51 transparent transparent;
+    }
+
+    .container.left .timeStamp,
+    .container.right .timeStamp {
+      right: auto;
+      left: -5px;
+    }
+
+    .container.left .milestone,
+    .container.right .milestone {
+      right: auto;
+      left: 146px;
+    }
+
+    .container.left .content,
+    .container.right .content {
+      padding: 30px 30px 30px 90px;
+      border-radius: 500px 0 0 500px;
+    }
+  }
+}
+
+.device-type-mobile {
+  .#{$appPrefix}-time-line-wrapper {
+    margin-left: 25px;
+  }
+}
+
+.#{$themeDark} {
+  .#{$appPrefix}-time-line {
+    .content {
+      background-color: $darkThemeBgAlt;
+    }
+
+    .timeStamp {
+      color: #dbceff;
+    }
+  }
+}

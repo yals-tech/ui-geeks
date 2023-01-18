@@ -1,0 +1,28 @@
+@import '../../../scss/variables.scss';
+@import '../../../scss/colors.scss';
+
+.#{$appPrefix}-text-carousal {
+  font-size: 0.9em;
+  font-style: italic;
+
+  .carousal-pager {
+    height: 15px;
+    margin-top: 20px;
+    .circle {
+      cursor: pointer;
+      display: inline-block;
+      height: 12px;
+      width: 12px;
+      border-radius: 50%;
+      background-color: $lightGray;
+      margin-right: 10px;
+    }
+
+    .circle-current {
+      background-color: $purple;
+      height: 5px;
+      width: 20px;
+      border-radius: 4px;
+    }
+  }
+}

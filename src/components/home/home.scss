@@ -1,0 +1,13 @@
+@import '../../scss/variables.scss';
+@import '../../scss/colors.scss';
+
+.#{$appPrefix}-home {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.#{$themeDark} {
+  .#{$appPrefix}-home {
+    color: black;
+  }
+}

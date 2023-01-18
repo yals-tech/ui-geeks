@@ -1,0 +1,15 @@
+@import '../../../scss/variables.scss';
+@import '../../../scss/colors.scss';
+
+.#{$appPrefix}-scroll-indicator {
+  height: 3px;
+  position: absolute;
+  top: 0;
+  background-color: $brightGreen;
+}
+
+.#{$themeDark} {
+  .#{$appPrefix}-scroll-indicator {
+    background-color: $darkThemeh4Color;
+  }
+}

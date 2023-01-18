@@ -1,0 +1,106 @@
+@import '../../../scss/variables.scss';
+@import '../../../scss/colors.scss';
+
+.#{$appPrefix}-menu-wrapper {
+  padding: 0px 10px 10px 0px;
+  overflow: auto;
+  .menu-title {
+    .#{$appPrefix}-heading {
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding-left: 10px;
+  }
+
+  .menu-ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+    li {
+      padding: 0.2rem 5px 0.2rem 0px;
+      font-size: 0.9rem;
+
+      a {
+        text-decoration: none;
+        display: block;
+        color: $lightGrayAlt;
+        padding-left: 10px;
+        border-left: 2px solid transparent;
+
+        &.selected {
+          padding: 2px 0px 3px 10px;
+
+          border-left: 2px solid $brightGreen;
+          background-color: $secondaryBgColor;
+          font-weight: bold;
+
+          .#{$appPrefix}-on-page-items {
+            margin-top: 5px;
+            li {
+              padding: 0.2rem 5px 0.2rem 0px;
+            }
+          }
+        }
+
+        &:hover {
+          color: $purple;
+          border-left: 2px solid $h1Color;
+        }
+
+        .arrow {
+          float: right;
+          padding-right: 10px;
+
+          svg {
+            height: 15px;
+            width: 15px;
+          }
+        }
+        .arrow-down {
+          svg {
+            transform: rotate(90deg);
+            height: 15px;
+            width: 15px;
+          }
+        }
+      }
+
+      .sub-menu {
+        overflow: auto;
+      }
+    }
+  }
+}
+
+.modal-fullscreen {
+  .menu-ul {
+    a {
+      padding: 5px 0px 5px 10px !important;
+    }
+  }
+}
+
+.#{$themeDark} {
+  .#{$appPrefix}-menu-wrapper {
+    .menu-title {
+      .#{$appPrefix}-heading {
+        color: $darkThemeColor;
+      }
+    }
+
+    a.selected {
+      background-color: #3f3f41 !important;
+
+      .arrow {
+        svg {
+          fill: $white;
+        }
+      }
+    }
+    .link-label {
+      color: $darkThemeColor;
+    }
+  }
+}

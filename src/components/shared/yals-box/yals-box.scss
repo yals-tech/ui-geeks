@@ -1,0 +1,89 @@
+@import '../../../scss/variables.scss';
+@import '../../../scss/colors.scss';
+
+.#{$appPrefix}-box {
+  padding: 10px;
+  border-radius: 4px;
+  background-color: $secondaryBgColor;
+  border: 1px solid $lightGray;
+  margin-bottom: 10px;
+
+  &:hover {
+    background-color: $lightGray;
+  }
+  a {
+    text-decoration: none;
+    color: $lightGrayAlt;
+
+    &:hover {
+      color: $purple;
+    }
+  }
+}
+
+.#{$appPrefix}-box.theme-green {
+  background-color: $green !important;
+
+  &:hover {
+    background-color: $brightGreen !important;
+  }
+  a {
+    color: $white;
+  }
+}
+
+.#{$appPrefix}-box.theme-orange {
+  background-color: $h3Color !important;
+
+  &:hover {
+    background-color: $h1Color !important;
+  }
+
+  a {
+    color: $white;
+  }
+}
+
+.#{$appPrefix}-box.theme-blue {
+  background-color: $colorLinkedIn !important;
+
+  &:hover {
+    background-color: $h5Color !important;
+  }
+
+  a {
+    color: $white;
+  }
+}
+
+.#{$appPrefix}-box.theme-yellow {
+  background-color: $yellow !important;
+
+  &:hover {
+    background-color: $darkYellow !important;
+  }
+
+  a {
+    color: $secondaryColor;
+  }
+}
+
+.#{$themeDark} {
+  .#{$appPrefix}-box {
+    background-color: $darkThemeBgAlt;
+    border: 1px solid $darkThemeBgAlt;
+
+    &:hover {
+      background-color: $darkThemeBg;
+    }
+    a {
+      color: $darkThemeColor;
+    }
+  }
+
+  .#{$appPrefix}-box.theme-yellow {
+    a {
+      color: $darkGray !important;
+    }
+  }
+}

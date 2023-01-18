@@ -1,0 +1,6 @@
+@import '../../../scss/variables.scss';
+
+.#{$appPrefix}-para {
+  line-height: 1.5;
+  text-align: justify;
+}

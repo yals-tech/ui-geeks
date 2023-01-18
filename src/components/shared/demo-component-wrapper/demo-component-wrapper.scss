@@ -1,0 +1,108 @@
+@import '../../../scss/colors.scss';
+@import '../../../scss/variables.scss';
+
+.demo-component {
+  border-radius: 4px;
+  padding: 10px;
+  background: $demoBg;
+  border: 1px solid $lightGray;
+  margin-right: 10px;
+  height: 100%;
+  text-align: left;
+
+  .prev-next-btn {
+    margin-bottom: 10px;
+    .#{$appPrefix}-btn {
+      padding-top: 0;
+    }
+    .prev {
+      margin-right: 10px;
+    }
+
+    .demo-ctr {
+      display: inline-block;
+      margin-right: 20px;
+      margin-left: 10px;
+      font-size: 0.8rem;
+      font-style: italic;
+    }
+  }
+
+  .demo-title {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: $h1Color;
+    font-weight: bold;
+  }
+
+  .result-item {
+    font-size: 0.8rem;
+    border-bottom: 1px solid $primaryColor;
+    margin-bottom: 5px;
+    .key-label {
+      font-style: italic;
+      margin-right: 10px;
+    }
+
+    .key-value {
+      font-weight: bold;
+      float: right;
+    }
+  }
+
+  .more-info-icon {
+    float: right;
+  }
+
+  .tab-content {
+    min-height: 280px;
+    max-height: 280px;
+    overflow: auto;
+
+    .#{$appPrefix}-code {
+      max-height: 100%;
+      overflow: auto;
+      font-size: 0.8rem;
+    }
+  }
+
+  .back-button {
+    margin-left: -7px;
+    svg {
+      margin-top: -7px;
+    }
+
+    .label {
+      font-size: 1.5rem;
+      color: $h2Color;
+      margin-left: 5px;
+    }
+  }
+}
+
+.full-page-demo {
+  margin-left: -10px;
+  margin-right: -10px;
+  padding: 10px;
+
+  .tab-content {
+    min-height: 280px;
+    max-height: 100%;
+    overflow: auto;
+
+    .#{$appPrefix}-code {
+      max-height: 100%;
+    }
+  }
+}
+
+.#{$themeDark} {
+  .demo-component {
+    background-color: $darkThemeBg;
+    color: $darkThemeColor;
+    border: 1px solid transparent;
+  }
+  .full-page-demo {
+    background-color: $darkThemeBg;
+  }
+}

@@ -1,0 +1,213 @@
+@import '~bootstrap/scss/bootstrap';
+@import './scss/colors.scss';
+@import './scss/variables.scss';
+
+body {
+  margin: 0;
+  height: 100%;
+  font-size: 1em;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.app-body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
+}
+
+.row {
+  margin-right: 0;
+  margin-left: 0;
+
+  div[class^='col-'] {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.#{$appPrefix}-ordered-list-expanded {
+  li {
+    margin-bottom: 1rem;
+  }
+}
+
+.#{$appPrefix}-ordered-list {
+  li {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.#{$appPrefix}-left-section {
+  position: sticky;
+  top: 0;
+
+  padding-top: 40px;
+  overflow: auto;
+  max-height: calc(100vh - 50px);
+  .menu-divider {
+    width: 75%;
+    padding-left: 15px;
+  }
+
+  .#{$appPrefix}-box {
+    margin-right: 5px;
+  }
+}
+
+.#{$appPrefix}-content-section {
+  background-color: $bodyBgColor;
+  padding: 0px 10px 0px 10px;
+  padding-top: 35px;
+  flex: 1 1 160px;
+
+  .mobile-menu-wrapper {
+    position: fixed;
+    height: 50px;
+    width: 50px;
+    top: 45px;
+    right: 30px;
+    background-color: $lightGray;
+    z-index: 99999;
+    border-radius: 50%;
+
+    &:hover {
+      background-color: $primaryColor;
+
+      svg {
+        transform: rotate(90deg);
+      }
+    }
+  }
+}
+
+.#{$appPrefix}-right-section {
+  position: sticky;
+  top: 0;
+  height: 96vh;
+  padding-top: 40px;
+  padding-left: 20px;
+
+  .#{$appPrefix}-box {
+    margin-left: 15px;
+  }
+
+  .sub-menu {
+    h5.ui-geeks-heading {
+      margin-top: 10px !important;
+      margin-bottom: 10px !important;
+    }
+  }
+}
+
+.row {
+  --bs-gutter-x: 0;
+}
+
+.device-type-mobile {
+  .#{$appPrefix}-breadcrumb {
+    padding-left: 0px;
+  }
+  .#{$appPrefix}-container {
+    padding: 0px;
+  }
+  .#{$appPrefix}-left-section {
+    display: none;
+  }
+
+  .custom-menu-box {
+    padding: 10px 5px;
+    border-radius: 4px;
+    background-color: $lightGray;
+    border: 1px solid $bodyBgColor;
+
+    .menu-ul {
+      a.selected {
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $primaryBgColor;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: $lightGrayAlt;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: $purple;
+}
+
+.text-sm {
+  font-size: 0.9rem;
+  color: $lightGrayAlt;
+  font-style: italic;
+}
+
+.#{$appPrefix}-sep {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background-color: $lightGray;
+  height: 2px;
+  width: 100%;
+}
+
+.large-quote {
+  font-size: 1.5rem;
+  color: $purple;
+  margin-right: 5px;
+  line-height: 0;
+}
+
+.#{$themeDark} {
+  background-color: $darkThemeBg;
+
+  .#{$appPrefix}-content-section,
+  .#{$appPrefix}-home-header {
+    background-color: $darkThemeBg;
+    color: $darkThemeColor;
+  }
+
+  .text-sm {
+    color: $darkThemeColor;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #4f5151 !important;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #949494 !important;
+  }
+
+  .custom-menu-box {
+    background-color: $darkThemeBg;
+    border: 1px solid $darkThemeColor;
+  }
+
+  h6.#{$appPrefix}-heading {
+    color: $darkThemeh6Color;
+  }
+
+  h5.#{$appPrefix}-heading {
+    color: $darkThemeh5Color;
+  }
+  h4.#{$appPrefix}-heading {
+    color: $darkThemeh4Color;
+  }
+}

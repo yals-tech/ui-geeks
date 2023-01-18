@@ -1,0 +1,92 @@
+@import '../../../scss/variables.scss';
+@import '../../../scss/colors.scss';
+
+.#{$appPrefix}-home-intro {
+  flex-direction: row;
+  height: 400px;
+  background-color: $appBg;
+
+  text-align: center;
+
+  .bg-image {
+    height: 50%;
+    img {
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 100%;
+      height: 80%;
+    }
+  }
+
+  .intro-section {
+    z-index: 1;
+    height: 100%;
+    width: 50%;
+
+    vertical-align: middle;
+    text-align: center;
+    .#{$appPrefix}-name {
+      font-size: 2rem;
+      font-style: italic;
+      color: white;
+    }
+
+    .#{$appPrefix}-sub-name {
+      font-size: 2em;
+      font-style: italic;
+      color: #e97951;
+    }
+
+    .#{$appPrefix}-tagline {
+      color: #fafafa;
+      font-style: italic;
+      font-size: 1em;
+      margin-top: 50px;
+    }
+  }
+}
+
+.device-type-mobile {
+  .#{$appPrefix}-home-intro {
+    flex-direction: column;
+    .#{$appPrefix}-name {
+      font-size: 1.5rem;
+    }
+
+    .#{$appPrefix}-sub-name {
+      font-size: 1.1rem;
+    }
+
+    .#{$appPrefix}-tagline {
+      font-size: 0.7rem;
+      text-align: center;
+    }
+
+    .intro-section {
+      height: 50%;
+      width: 100%;
+    }
+
+    .bg-image {
+      img {
+        width: 80%;
+        height: 80%;
+      }
+    }
+  }
+}
+
+.#{$appPrefix}-animate-top {
+  position: relative;
+  animation: animatetop 0.4s;
+}
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}

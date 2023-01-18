@@ -1,0 +1,30 @@
+@import '../../../scss/variables.scss';
+@import '../../../scss/colors.scss';
+
+.#{$appPrefix}-image {
+  display: inline-block;
+  text-align: center;
+  img {
+    box-shadow: 5px 5px 10px 5px #c0c0c0;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .img-title {
+    position: relative;
+    top: -20px;
+    font-weight: bold;
+    font-style: italic;
+    color: $h2Color;
+    text-align: center;
+  }
+}
+
+.#{$themeDark} {
+  .#{$appPrefix}-image {
+    img {
+      box-shadow: 5px 5px 10px 5px $darkThemeBgAlt;
+    }
+  }
+}

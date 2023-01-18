@@ -1,0 +1,13 @@
+@import '../../../scss/variables.scss';
+@import '../../../scss/colors.scss';
+
+.#{$appPrefix}-summary {
+  border-top: 2px solid $lightGray;
+
+  padding-bottom: 10px;
+
+  .#{$appPrefix}-heading {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}

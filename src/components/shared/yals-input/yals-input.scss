@@ -1,0 +1,32 @@
+@import '../../../scss/variables.scss';
+@import '../../../scss/colors.scss';
+
+.#{$appPrefix}-input {
+  .input-group-text {
+    border: 1px solid $purple;
+  }
+
+  .form-control {
+    border-radius: 2px;
+    min-height: 25px;
+    height: 25px;
+
+    &:focus {
+      border: 1px solid $purple;
+    }
+  }
+  .input-label {
+    display: block;
+    color: $lightGrayAlt;
+    margin-bottom: 5px;
+    cursor: pointer;
+  }
+}
+
+.#{$themeDark} {
+  .#{$appPrefix}-input {
+    .input-label {
+      color: $darkThemeColor;
+    }
+  }
+}

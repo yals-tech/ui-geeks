@@ -1,0 +1,77 @@
+@import '../../../scss/variables.scss';
+@import '../../../scss/colors.scss';
+
+.#{$appPrefix}-landing {
+  z-index: 99999;
+  min-height: 96vh;
+  h1 {
+    color: $h2Color;
+  }
+  .language-icon {
+    height: 100px;
+    width: 100px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+  }
+
+  .content-section {
+    margin-bottom: 30px;
+  }
+
+  .landing-content {
+    margin-top: -95px;
+
+    .content-details-section {
+      h1 {
+        margin-left: 10px;
+        margin-bottom: 0px;
+      }
+    }
+  }
+
+  .js-word-count {
+    width: 100%;
+    z-index: 0;
+  }
+
+  .topic-list {
+    flex-wrap: wrap;
+    margin: 2px;
+    flex-basis: content;
+    flex: 1 1 160px;
+
+    .insight {
+      background: $secondaryBgColor;
+      padding: 10px;
+      border-radius: 4px;
+      margin-right: 25px;
+      margin-bottom: 20px;
+      margin: 10px;
+
+      flex-grow: inherit;
+
+      .#{$appPrefix}-btn {
+        &:active {
+          border: none;
+        }
+      }
+      &:hover {
+        box-shadow: 3px 4px 7px 0px #adadad;
+      }
+
+      .insight-key {
+        font-size: 1.1em;
+        color: $boxShadow;
+        font-style: italic;
+        text-align: left;
+      }
+
+      .insight-value {
+        font-size: 1.2em;
+        font-weight: bold;
+        color: $purple;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

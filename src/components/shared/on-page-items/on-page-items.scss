@@ -1,0 +1,82 @@
+@import '../../../scss/variables.scss';
+@import '../../../scss/colors.scss';
+
+.#{$appPrefix}-on-page-items {
+  padding-left: 15px;
+
+  ul {
+    list-style: none;
+    padding: 0 !important;
+
+    .selected-sub-menu {
+      background-color: $lightGray;
+      padding-left: 5px !important;
+    }
+
+    li {
+      .#{$appPrefix}-btn {
+        text-decoration: none;
+        padding: 2px !important;
+        color: $lightGrayAlt;
+        padding-left: 10px;
+        text-align: left;
+        word-break: break-word;
+        display: block;
+        width: 100%;
+
+        &:hover {
+          color: $h1Color !important;
+        }
+      }
+
+      padding: 1px 0px 1px 0px;
+      border-bottom: 1px solid $lightGray;
+      .btn {
+        color: $lightPurple;
+        padding: 1px 2px 1px 0px !important;
+      }
+    }
+  }
+}
+
+.modal-fullscreen {
+  .#{$appPrefix}-on-page-items {
+    ul {
+      li {
+        .btn {
+          padding: 3px 2px 3px 0px !important;
+        }
+      }
+    }
+  }
+}
+
+.#{$themeDark} {
+  .selected-sub-menu {
+    background-color: #413f3f !important;
+  }
+
+  .#{$appPrefix}-right-section {
+    .#{$appPrefix}-on-page-items {
+      background-color: transparent;
+
+      h5.#{$appPrefix}-heading {
+        color: #f4f4f4;
+      }
+    }
+  }
+
+  .#{$appPrefix}-on-page-items {
+    background-color: #353535;
+
+    li {
+      border-bottom: 1px solid $darkThemeGray;
+    }
+    .#{$appPrefix}-btn {
+      color: $white;
+      &:active {
+        border-color: transparent !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+@import '../../../scss/variables.scss';
+@import '../../../scss/colors.scss';
+
+.#{$appPrefix}-tooltip {
+  text-decoration: dashed underline $primaryBgColor;
+}
+
+.tooltip-inner {
+  //   background-color: $purple;
+  //   color: white;
+}
+
+.bs-tooltip-top .tooltip-arrow::before {
+  //   border-top-color: $purple;
+}

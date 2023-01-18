@@ -1,0 +1,45 @@
+@import '../../../scss/variables.scss';
+@import '../../../scss/colors.scss';
+
+.#{$appPrefix}-heading {
+  margin-bottom: 1.5rem;
+}
+
+h1.#{$appPrefix}-heading {
+  color: $h1Color;
+  font-size: 2rem;
+}
+
+h2.#{$appPrefix}-heading {
+  color: $h2Color;
+  margin-top: 2rem;
+  font-size: 1.5rem;
+}
+
+h3.#{$appPrefix}-heading {
+  margin-top: 2rem;
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: $h3Color;
+}
+
+h4.#{$appPrefix}-heading {
+  margin-top: 2rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: $h4Color;
+}
+
+h5.#{$appPrefix}-heading {
+  margin-top: 2rem;
+  font-weight: bold;
+  font-size: 1rem;
+  color: $h5Color;
+}
+
+h6.#{$appPrefix}-heading {
+  margin-top: 2rem;
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: $h6Color;
+}

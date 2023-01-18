@@ -1,0 +1,14 @@
+@import '../../../scss/variables.scss';
+@import '../../../scss/colors.scss';
+
+.#{$appPrefix}-code {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.#{$appPrefix}-code-no-copy-btn {
+  // Hide the copy code button
+  button {
+    display: none;
+  }
+}

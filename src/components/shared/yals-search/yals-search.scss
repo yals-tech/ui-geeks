@@ -1,0 +1,143 @@
+@import '../../../scss/variables.scss';
+@import '../../../scss/colors.scss';
+
+.#{$appPrefix}-search {
+  text-align: center;
+  width: 100px;
+  margin-right: 5px;
+  display: inline-block;
+
+  .#{$appPrefix}-search-input {
+    margin: auto;
+    max-width: 250px;
+
+    .form-control {
+      height: 24px;
+      padding: 0px 2px 2px 5px;
+      font-size: 0.8rem;
+    }
+
+    input {
+      cursor: pointer !important;
+      border-color: $lightGray;
+    }
+
+    .input-group-text {
+      width: 35px;
+      padding-left: 8px;
+      background-color: #6e45e2;
+      height: 24px;
+      cursor: pointer;
+    }
+  }
+}
+
+.#{$appPrefix}-search-container {
+  .#{$appPrefix}-search-input {
+    .input-group-text {
+      background-color: #6e45e2;
+    }
+  }
+
+  .search-result-wrapper {
+    .topic-list {
+      flex-wrap: wrap;
+      flex-basis: content;
+      flex: 1 1 160px;
+
+      .insight {
+        background: $secondaryBgColor;
+        padding: 2px;
+        border-radius: 4px;
+        margin-right: 25px;
+        margin-bottom: 20px;
+        margin: 5px;
+
+        flex-grow: inherit;
+
+        .#{$appPrefix}-btn {
+          &:active {
+            border: none;
+          }
+        }
+        &:hover {
+          box-shadow: 3px 4px 7px 0px #adadad;
+        }
+
+        .insight-key {
+          font-size: 1.1em;
+          color: $boxShadow;
+          font-style: italic;
+          text-align: left;
+        }
+
+        .matching-term {
+          font-style: italic;
+          color: $lightGrayAlt;
+          text-align: left;
+        }
+
+        .insight-value {
+          display: block;
+          font-size: 1.2em;
+          font-weight: bold;
+          color: $purple;
+          text-align: left;
+        }
+      }
+    }
+
+    h4.#{$appPrefix}-heading {
+      margin-left: 10px;
+    }
+
+    .no-result-found {
+      .msg {
+        margin-top: 50px;
+        text-align: center;
+        color: $purple;
+        font-weight: bold;
+      }
+
+      .#{$appPrefix}-btn {
+        margin-top: -5px;
+      }
+    }
+  }
+}
+
+.#{$themeDark} {
+  .#{$appPrefix}-search-input {
+    input {
+      background-color: $darkThemeBgAlt;
+      border-color: $darkThemeBgAlt;
+      color: $darkThemeColor;
+      &:focus {
+        border-color: $darkThemeGray;
+      }
+    }
+
+    .input-group-text {
+      border: 1px solid $darkThemeGray;
+    }
+  }
+
+  .search-result-wrapper {
+    .insight {
+      background-color: $darkThemeBgAlt !important;
+      color: $darkThemeColor !important;
+
+      &:hover {
+        box-shadow: 1px 1px 2px 0px #696767 !important;
+      }
+
+      .insight-value {
+        color: $darkThemeColor !important;
+      }
+
+      .matching-term {
+        color: #c3c3c3 !important;
+      }
+    }
+  }
+}

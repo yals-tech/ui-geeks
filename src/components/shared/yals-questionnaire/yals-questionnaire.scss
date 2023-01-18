@@ -1,0 +1,75 @@
+@import '../../../scss/variables.scss';
+@import '../../../scss/colors.scss';
+
+.#{$appPrefix}-questionaire {
+  border-top: 2px solid $lightGray;
+  border-bottom: 2px solid $lightGray;
+  padding-bottom: 20px;
+
+  .#{$appPrefix}-heading {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .action-button {
+    .btn-prev {
+      margin-right: 10px;
+    }
+
+    .show-correct-answer {
+      margin-left: 10px;
+    }
+  }
+
+  .no-option-selected {
+    color: $red;
+    margin-left: 10px;
+    font-size: 0.8rem;
+  }
+
+  .correct-answer {
+    background-color: $success;
+    border: $successBorder;
+    padding: 3px 10px;
+    margin-left: 10px;
+    border-radius: 4px;
+    font-size: 0.9em;
+  }
+
+  .explanation {
+    background-color: $lightGray;
+    border: 1px solid $lightGray;
+    font-size: 0.8em;
+    margin-top: 10px;
+    padding: 5px 10px;
+    border-radius: 4px;
+  }
+
+  .wrong-answer {
+    background-color: $error;
+    color: $red;
+    border: $errorBorder;
+    padding: 3px 10px;
+    margin-left: 10px;
+    border-radius: 4px;
+    font-size: 0.9em;
+  }
+}
+
+.#{$themeDark} {
+  .#{$appPrefix}-questionaire {
+    .correct-answer {
+      background-color: #074324;
+      border: 1px solid #145331;
+    }
+
+    .wrong-answer {
+      background-color: #8c1d1d;
+      color: #f0c8c8;
+      border: 1px solid #9e2020;
+    }
+
+    .explanation {
+      color: $darkThemeBg;
+    }
+  }
+}

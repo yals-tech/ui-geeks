@@ -1,0 +1,11 @@
+@import '../../../scss/variables.scss';
+@import '../../../scss/colors.scss';
+
+.#{$appPrefix}-ad {
+  // display: none;
+  .ad-label {
+    font-style: italic;
+    text-align: center;
+    display: block;
+  }
+}

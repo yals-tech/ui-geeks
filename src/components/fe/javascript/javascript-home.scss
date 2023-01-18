@@ -1,0 +1,13 @@
+@import '../../../scss/variables.scss';
+.intro-headline {
+  background-color: $purple;
+  height: 500px;
+
+  h1 {
+    color: $white;
+  }
+}
+
+.mobile-menu-wrapper {
+  z-index: 9;
+}

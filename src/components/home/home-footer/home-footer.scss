@@ -1,0 +1,140 @@
+@import '../../../scss/variables.scss';
+@import '../../../scss/colors.scss';
+
+.#{$appPrefix}-home-footer {
+  background-color: #ededed;
+  color: #2f2b2b;
+  padding: 10px;
+  font-size: 0.9rem;
+
+  .detail-footer {
+    text-align: left;
+    padding: 0px 5px 0px 10px;
+
+    .intro-text {
+      margin-top: 25px;
+
+      .intro-text-title {
+        margin-bottom: 10px;
+      }
+    }
+
+    .social-info {
+      text-align: right;
+      height: 25px;
+      display: inline-block;
+      float: right;
+      width: 150px;
+      margin-top: -6px;
+    }
+
+    .icon-fb {
+      svg {
+        fill: $colorFacebook;
+      }
+    }
+
+    .icon-linkedin {
+      svg {
+        fill: $colorLinkedIn;
+      }
+    }
+
+    .icon-twitter {
+      svg {
+        fill: $colorTwitter;
+      }
+    }
+
+    .icon-instagram {
+      svg {
+        fill: $colorInstagram;
+      }
+    }
+
+    .#{$appPrefix}-btn {
+      &:hover,
+      &:focus {
+        svg {
+          fill: $darkThemeBgAlt;
+          height: 25px;
+          width: 25px;
+        }
+      }
+    }
+
+    .privacy-terms {
+      margin-top: 25px;
+      margin-bottom: 25px;
+
+      a {
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+          color: $lightGrayAlt;
+        }
+      }
+    }
+  }
+
+  .detail-footer.home-page {
+    min-height: 250px;
+    text-align: center;
+    padding: 0px 30px;
+
+    .social-info {
+      text-align: right;
+      height: 25px;
+      width: 100%;
+    }
+
+    .app-info {
+      height: 100px;
+      margin-top: 25px;
+      .app-name {
+        font-weight: bold;
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
+
+.#{$themeDark} {
+  .#{$appPrefix}-home-footer {
+    background-color: #272736;
+    color: #ffffff;
+
+    .#{$appPrefix}-btn {
+      &:hover,
+      &:focus {
+        svg {
+          fill: $darkThemeColor;
+          height: 25px;
+          width: 25px;
+        }
+      }
+      svg {
+        fill: $white;
+      }
+    }
+  }
+  .detail-footer {
+    .privacy-terms {
+      a {
+        color: $darkThemeColor;
+
+        &:hover {
+          text-decoration: underline;
+          color: $darkThemeColor;
+        }
+      }
+    }
+  }
+}
+
+.device-type-mobile {
+  .detail-footer {
+    padding: 0px;
+  }
+}

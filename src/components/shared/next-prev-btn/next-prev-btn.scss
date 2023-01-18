@@ -1,0 +1,52 @@
+@import '../../../scss/variables.scss';
+@import '../../../scss/colors.scss';
+
+.#{$appPrefix}-prev-next-btn {
+  padding: 10px;
+  margin-bottom: 25px;
+  margin-top: 20px;
+  border: 1px solid $brightGreen;
+  border-radius: 10px;
+
+  .route-link {
+    font-size: 0.7rem;
+  }
+
+  .prev-btn-wrapper {
+    text-align: left;
+
+    .prev-button {
+      text-align: left;
+    }
+
+    .#{$appPrefix}-btn {
+      text-align: left;
+    }
+  }
+
+  .next-btn-wrapper {
+    text-align: right;
+    .#{$appPrefix}-btn {
+      text-align: right;
+    }
+    .next-button {
+      text-align: right;
+      .#{$appPrefix}-text-bold {
+        margin-right: 15px;
+      }
+    }
+  }
+}
+
+.device-type-mobile {
+  .prev-btn-wrapper {
+    padding-right: 0px;
+    margin-bottom: 5px;
+  }
+}
+
+.#{$themeDark} {
+  .#{$appPrefix}-prev-next-btn {
+    border: 1px solid $darkThemeGray;
+  }
+}

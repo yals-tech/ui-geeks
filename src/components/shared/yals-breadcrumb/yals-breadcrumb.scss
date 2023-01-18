@@ -1,0 +1,42 @@
+@import '../../../scss/variables.scss';
+@import '../../../scss/colors.scss';
+
+.#{$appPrefix}-breadcrumb {
+  padding-left: 1rem;
+  margin-top: 30px;
+
+  .breadcrumb {
+    margin-bottom: 0;
+  }
+  .breadcrumb-item {
+    a {
+      text-decoration: none;
+    }
+  }
+  .breadcrumb-item.active {
+    font-weight: bold;
+  }
+
+  .inactive-item {
+    font-weight: normal !important;
+  }
+}
+
+.device-type-mobile {
+  .#{$appPrefix}-breadcrumb {
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+}
+
+.#{$themeDark} {
+  .#{$appPrefix}-breadcrumb {
+    a {
+      color: $darkThemeColor;
+    }
+
+    .breadcrumb-item.active {
+      color: $darkThemeColor;
+    }
+  }
+}
