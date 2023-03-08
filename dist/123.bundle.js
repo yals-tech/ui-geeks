@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkui_geeks_in_web=self.webpackChunkui_geeks_in_web||[]).push([[123],{10123:(e,a,i)=>{i.r(a),i.d(a,{JSBreadcrumbLink:()=>k});var k=[{label:"Home",link:"/"},{label:"JavaScript",link:"/javascript/home"}]}}]);
