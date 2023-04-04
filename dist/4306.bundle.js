@@ -1,1 +1,1 @@
-"use strict";(self.webpackChunkui_geeks_in_web=self.webpackChunkui_geeks_in_web||[]).push([[4306],{44306:(e,l,a)=>{a.r(l),a.d(l,{JS_BLOGS_BREADCRUMB_LINKS:()=>i});var i=[{label:"Home",link:"/"},{label:"JavaScript",link:"/javascript/home"},{label:"Blogs",link:null}]}}]);
+"use strict";(self.webpackChunkui_geeks_in=self.webpackChunkui_geeks_in||[]).push([[4306],{44306:(e,l,a)=>{a.r(l),a.d(l,{JS_BLOGS_BREADCRUMB_LINKS:()=>i});var i=[{label:"Home",link:"/"},{label:"JavaScript",link:"/javascript/home"},{label:"Blogs",link:null}]}}]);
