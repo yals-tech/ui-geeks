@@ -20,6 +20,7 @@ const YALSButton = (props: YALSButtonProps) => {
     noHighlight = false,
     target,
     ariaLabel = href,
+    id,
     onClick,
     onMouseMove
   } = props;
@@ -46,6 +47,7 @@ const YALSButton = (props: YALSButtonProps) => {
         title={title}
         tabIndex={0}
         active={active}
+        id={id}
         disabled={disabled}
         onMouseMove={onMouseMove && onMouseMove}
         aria-label={ariaLabel}

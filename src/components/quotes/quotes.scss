@@ -1,0 +1,151 @@
+@import '../../scss/variables.scss';
+@import '../../scss/colors.scss';
+
+.#{$appPrefix}-quote {
+  .qt-box {
+    position: absolute;
+    top: 100px;
+    bottom: 60px;
+    left: 5px;
+    right: 5px;
+    padding-top: 30px;
+    z-index: 1;
+    background-size: cover;
+    background-position: bottom center;
+    background-color: #cecece;
+    margin-top: 15px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .qt-content {
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 15px;
+    // opacity: 0.7;
+    background-color: #1c2127;
+    filter: drop-shadow(2px 4px 6px black);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 65%;
+    width: 100%;
+    filter: drop-shadow(2px 4px 6px black);
+
+    .insta-qr {
+      text-align: left;
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      left: 15px;
+
+      .insta-label {
+        color: white;
+        letter-spacing: 2px;
+        margin-left: 5px;
+      }
+
+      .insta-value {
+        font-weight: bold;
+        letter-spacing: 2px;
+      }
+    }
+
+    .qt-image {
+      text-align: right;
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      right: 20px;
+
+      img {
+        transform: rotate(335deg);
+      }
+    }
+
+    .text {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+  }
+  .nav-btn {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    padding: 0px 10px 0px 10px;
+    opacity: 0.8;
+    span {
+      width: 100%;
+      text-align: center;
+
+      button {
+        width: 80%;
+      }
+    }
+  }
+
+  .quote-genre-box {
+    margin-top: 25px;
+    button {
+      margin-right: 10px;
+    }
+
+    .genre-dd {
+      padding: 5px 10px 10px 10px;
+      border-radius: 4px;
+      margin-left: -5px;
+      margin-right: -5px;
+      label {
+        font-size: 12px;
+        font-weight: bold;
+        color: white;
+      }
+      margin-bottom: 20px;
+    }
+  }
+
+  .total-quotes {
+    min-width: 100px;
+    padding: 5px 0px 0px 0px;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: bold;
+  }
+}
+
+.device-type-mobile {
+  .ui-geeks-quote {
+    .qt-content {
+      height: 80%;
+      margin-top: -45px;
+    }
+  }
+  .text {
+    font-size: 1.1rem !important;
+    word-spacing: 3px;
+  }
+
+  .qt-box {
+    top: 115px;
+  }
+  .mob-filter {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    .genre-dd {
+      flex-grow: 1;
+    }
+
+    .mob-fav-btn {
+      button {
+        height: 62px;
+        width: 100%;
+      }
+    }
+  }
+}

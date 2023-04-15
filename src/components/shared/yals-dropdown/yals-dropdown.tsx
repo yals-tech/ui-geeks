@@ -33,7 +33,7 @@ const YALSDropdown = (props: IYALSDropdownProps) => {
         value={value}
       >
         {options.map((opt: IYALSDropdownItemType) => (
-          <option>{opt.text}</option>
+          <option key={opt.text}>{opt.text}</option>
         ))}
       </Form.Select>
     </div>

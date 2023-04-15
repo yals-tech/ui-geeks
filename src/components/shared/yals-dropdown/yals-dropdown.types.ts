@@ -2,7 +2,7 @@ import { ReactNode } from 'react';
 
 export interface IYALSDropdownItemType {
   text: string;
-  value: string;
+  value: string | number;
   hint?: string;
 }
 export interface IYALSDropdownProps {

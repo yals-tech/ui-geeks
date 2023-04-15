@@ -2,6 +2,7 @@ export const ImagePaths = {
   APP_LOGO: 'https://live.staticflickr.com/65535/52423809250_e0122b7bfc_o.png',
   APP_IMAGE: 'https://live.staticflickr.com/65535/52423809260_d96da7d5d9.jpg',
   APP_IMAGE_WEBP: `images/ui-geeks-icon-webp.webp`,
+  SNOW_GIF: 'images/snowfall.gif',
   APP_SIGNATURE:
     'https://live.staticflickr.com/65535/52423640439_79bf09e627_n.jpg',
   JS_Logo: `//live.staticflickr.com/65535/52364799530_6b19c52df1_c.jpg`,

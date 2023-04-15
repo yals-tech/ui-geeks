@@ -35,7 +35,7 @@ const ReactJSXRenderingElements = () => {
 
       <YalsFlex justifyContent={FlexJustifyContentTypes.Center}>
         <YalsImage
-          imagePath='https://reactjs.org/c158617ed7cc0eac8f58330e49e48224/granular-dom-updates.gif'
+          imagePath='https://legacy.reactjs.org/c158617ed7cc0eac8f58330e49e48224/granular-dom-updates.gif'
           alt={`React only updates what's necessary`}
           height='300px'
         />
