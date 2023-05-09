@@ -1,0 +1,21 @@
+@import '../../scss/variables.scss';
+
+.#{$appPrefix}-vscode-extention {
+  .ext-image {
+    width: 10%;
+  }
+
+  .ext-detail {
+    margin-left: 50px;
+    margin-top: 10px;
+    width: 60%;
+  }
+
+  .ext-tags {
+    width: 30%;
+  }
+  .ext-stat {
+    display: inline;
+    margin-right: 10px;
+  }
+}
