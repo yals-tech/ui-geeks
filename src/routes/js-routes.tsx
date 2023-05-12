@@ -1,97 +1,31 @@
-import React, { lazy } from 'react';
+import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-
-const JSArrays = lazy(
-  () => import(`../components/fe/javascript/arrays/arrays`)
-);
-
-const JSBlog = lazy(
-  () => import('../components/fe/javascript/blogs/javascript-blog')
-);
-const JSClass = lazy(() => import('../components/fe/javascript/class/class'));
-const JSCodeChallenge = lazy(
-  () =>
-    import(
-      '../components/fe/javascript/code-challenges/javascript-code-challenge'
-    )
-);
-const JSConsole = lazy(
-  () => import('../components/fe/javascript/console/console')
-);
-const JSControlStructures = lazy(
-  () =>
-    import('../components/fe/javascript/control-structures/control-structures')
-);
-const JSExceptionHandling = lazy(
-  () =>
-    import('../components/fe/javascript/exception-handling/exception-handling')
-);
-const JSArrowFunctions = lazy(
-  () =>
-    import(
-      '../components/fe/javascript/functions/arrow-functions/arrow-functions'
-    )
-);
-const JSFunctionClosures = lazy(
-  () => import('../components/fe/javascript/functions/closures/closures')
-);
-const JSFunctions = lazy(
-  () => import('../components/fe/javascript/functions/function')
-);
-const JSGrammer = lazy(
-  () => import('../components/fe/javascript/grammer/grammer')
-);
-const JSHistory = lazy(
-  () => import('../components/fe/javascript/history/history')
-);
-const JSHoisting = lazy(
-  () => import('../components/fe/javascript/hoisting/hoisting')
-);
-const JSInclude = lazy(
-  () =>
-    import('../components/fe/javascript/include-javascript/include-javascript')
-);
-const JSIntroduction = lazy(
-  () => import('../components/fe/javascript/introduction/introduction')
-);
-const JSIteratorsGenerators = lazy(
-  () =>
-    import(
-      '../components/fe/javascript/iterators-generators/iterators-generators'
-    )
-);
-const JSHome = lazy(
-  () => import('../components/fe/javascript/javascript-home')
-);
-const JSHomeDemoComponent = lazy(
-  () =>
-    import(
-      '../components/fe/javascript/js-home-demo-component/js-home-demo-component'
-    )
-);
-const JSLandingPage = lazy(
-  () =>
-    import('../components/fe/javascript/landing-page/javascript-landing-page')
-);
-const JSModules = lazy(
-  () => import('../components/fe/javascript/modules/modules')
-);
-const JSObjects = lazy(
-  () => import('../components/fe/javascript/objects/objects')
-);
-const JSOperators = lazy(
-  () => import('../components/fe/javascript/operators/operators')
-);
-const JSPrototypeChain = lazy(
-  () => import('../components/fe/javascript/prototype-chain/prototype-chain')
-);
-const JSStrictMode = lazy(
-  () => import('../components/fe/javascript/strict-mode/strict-mode')
-);
-const JSTypes = lazy(
-  () => import('../components/fe/javascript/the-types/the-types')
-);
-const JSThis = lazy(() => import('../components/fe/javascript/this/this'));
+import JSArrays from '../components/fe/javascript/arrays/arrays';
+import JSBlog from '../components/fe/javascript/blogs/javascript-blog';
+import JSClass from '../components/fe/javascript/class/class';
+import JSCodeChallenge from '../components/fe/javascript/code-challenges/javascript-code-challenge';
+import JSConsole from '../components/fe/javascript/console/console';
+import JSControlStructures from '../components/fe/javascript/control-structures/control-structures';
+import JSExceptionHandling from '../components/fe/javascript/exception-handling/exception-handling';
+import JSArrowFunctions from '../components/fe/javascript/functions/arrow-functions/arrow-functions';
+import JSFunctionClosures from '../components/fe/javascript/functions/closures/closures';
+import JSFunctions from '../components/fe/javascript/functions/function';
+import JSGrammer from '../components/fe/javascript/grammer/grammer';
+import JSHistory from '../components/fe/javascript/history/history';
+import JSHoisting from '../components/fe/javascript/hoisting/hoisting';
+import JSInclude from '../components/fe/javascript/include-javascript/include-javascript';
+import JSIntroduction from '../components/fe/javascript/introduction/introduction';
+import JSIteratorsGenerators from '../components/fe/javascript/iterators-generators/iterators-generators';
+import JSHome from '../components/fe/javascript/javascript-home';
+import JSHomeDemoComponent from '../components/fe/javascript/js-home-demo-component/js-home-demo-component';
+import JSLandingPage from '../components/fe/javascript/landing-page/javascript-landing-page';
+import JSModules from '../components/fe/javascript/modules/modules';
+import JSObjects from '../components/fe/javascript/objects/objects';
+import JSOperators from '../components/fe/javascript/operators/operators';
+import JSPrototypeChain from '../components/fe/javascript/prototype-chain/prototype-chain';
+import JSStrictMode from '../components/fe/javascript/strict-mode/strict-mode';
+import JSTypes from '../components/fe/javascript/the-types/the-types';
+import JSThis from '../components/fe/javascript/this/this';
 
 const JSRoutes = () => {
   return (

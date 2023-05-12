@@ -16,7 +16,8 @@ export const YALSButtonVariantTypes = {
 
 export const YALSSizeTypes = {
   Small: 'sm',
-  Large: 'lg'
+  Large: 'lg',
+  ExtraLarge: 'xl'
 };
 
 export type YALSButtonVariantType = ValueOf<typeof YALSButtonVariantTypes>;

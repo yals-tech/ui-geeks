@@ -1,21 +1,52 @@
 @import '../../scss/variables.scss';
 
 .#{$appPrefix}-vscode-extention {
-  .ext-image {
-    width: 10%;
-  }
+  .ext-content {
+    display: flex;
 
-  .ext-detail {
-    margin-left: 50px;
-    margin-top: 10px;
-    width: 60%;
-  }
+    .ext-box {
+      flex-wrap: wrap;
+      gap: 10px;
 
-  .ext-tags {
-    width: 30%;
+      .#{$appPrefix}-box {
+        margin-bottom: 0px;
+        min-width: 500px;
+        flex: 1;
+      }
+
+      .ext-image {
+        margin-bottom: 15px;
+
+        .img-box {
+          display: inline-block;
+        }
+
+        img {
+          margin-right: 25px;
+          margin-left: 10px;
+          vertical-align: bottom;
+        }
+      }
+      .ext-detail {
+        display: inline-block;
+        align-items: center;
+      }
+    }
   }
-  .ext-stat {
-    display: inline;
-    margin-right: 10px;
+}
+
+.device-type-mobile {
+  .#{$appPrefix}-vscode-extention {
+    .#{$appPrefix}-box {
+      min-width: 100% !important;
+    }
+
+    .ext-image {
+      .img-box {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 25px;
+      }
+    }
   }
 }

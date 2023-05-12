@@ -1,8 +1,7 @@
 import React, { lazy, Suspense, useEffect, useState } from 'react';
 
 import { Route, Routes } from 'react-router';
-const Home = lazy(() => import('../components/home/home'));
-
+import Home from '../components/home/home';
 import HomeFooter from '../components/home/home-footer/home-footer';
 import HomeHeader from '../components/home/home-header/home-header';
 import ContentLoader from '../components/shared/content-loader/content-loader';
@@ -11,11 +10,10 @@ import { AppContext } from '../util/app-context';
 import { THEME } from '../util/util';
 import JSRoutes from './js-routes';
 import ReactRoutes from './react-routes';
+
 const VscodeExtension = React.lazy(
   () => import(`../components/vscode-extensions/vscode-extension`)
 );
-
-const Quotes = lazy(() => import('../components/quotes/quotes'));
 
 const YalsPrivacyPolicy = React.lazy(
   () => import(`../components/shared/yals-privacy-policy/yals-privacy-policy`)
@@ -24,6 +22,7 @@ const YalsTermsConditions = React.lazy(
   () =>
     import(`../components/shared/yals-terms-conditions/yals-terms-conditions`)
 );
+const Quotes = lazy(() => import('../components/quotes/quotes'));
 
 const AppRouter = (props: any) => {
   const {} = props;
@@ -52,6 +51,7 @@ const AppRouter = (props: any) => {
               <Route path='/' element={<Home />} />
               <Route path='/privacy-policy' element={<YalsPrivacyPolicy />} />
               <Route path='/vscode-extensions' element={<VscodeExtension />} />
+
               <Route
                 path='/terms-of-service'
                 element={<YalsTermsConditions />}

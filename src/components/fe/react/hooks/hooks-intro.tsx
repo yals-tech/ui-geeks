@@ -31,8 +31,8 @@ const ReactHooksIntro = () => {
         <B>Hooks</B> were added in React <B>v16.8</B>. Hooks lets us use
         <Space /> <I>state</I> and other React features without writing a class
         component. Hooks are functions that let us <B>"hook into"</B> React
-        <I>state</I> and <I>lifecycle</I> features from function components.
-        Hooks <B>don't work</B> inside class components.
+        <Space /> <I>state</I> and <I>lifecycle</I> features from function
+        components. Hooks <B>don't work</B> inside class components.
       </Para>
 
       <Para>

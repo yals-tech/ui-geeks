@@ -1,0 +1,22 @@
+[
+  {
+    "extensionId": "d5849a88-f199-41b9-9061-3633cd7edece",
+    "extensionName": "npm-dependencies-ui-geeks",
+    "displayName": "NPM Dependency Report",
+    "shortDescription": "Generate Visual NPM Package Dependency Report.",
+    "version": "1.0.1",
+    "icon": "https://skumarmca2010.gallerycdn.vsassets.io/extensions/skumarmca2010/npm-dependencies-ui-geeks/1.0.0/1683306986931/Microsoft.VisualStudio.Services.Icons.Small",
+    "categories": ["Visualization"],
+    "demoURL": "https://github.com/skumar-mca/ui-geeks-ext-package-dep/raw/HEAD/images/readme/demo.gif"
+  },
+  {
+    "extensionId": "232e506e-6fdd-40c7-bc1b-bf30c9e38a56",
+    "extensionName": "npm-audit-ui-geeks",
+    "displayName": "NPM Audit Report",
+    "shortDescription": "Generate Visual NPM Package Audit Report.",
+    "version": "1.0.1",
+    "icon": "https://skumarmca2010.gallerycdn.vsassets.io/extensions/skumarmca2010/npm-audit-ui-geeks/1.0.0/1683306961513/Microsoft.VisualStudio.Services.Icons.Small",
+    "categories": ["Visualization"],
+    "demoURL": "https://github.com/skumar-mca/ui-geeks-ext-npm-audit/raw/HEAD/images/readme/demo.gif"
+  }
+]

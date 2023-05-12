@@ -288,7 +288,7 @@ const LanguageComponent = () => {
               ></YALSDropdown>
             </div>
 
-            <div className='mob-fav-btn bg-light'>
+            <div className='mob-fav-btn'>
               <RenderFavFilterButton />
             </div>
           </div>
