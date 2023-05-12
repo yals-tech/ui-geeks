@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkui_geeks_in_web=self.webpackChunkui_geeks_in_web||[]).push([[8111],{98111:(e,a,k)=>{k.r(a),k.d(a,{ReactBreadcrumbLink:()=>i});var i=[{label:"Home",link:"/"},{label:"React",link:"/react/home"}]}}]);

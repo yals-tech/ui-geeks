@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkui_geeks_in_web=self.webpackChunkui_geeks_in_web||[]).push([[1795],{21795:(e,n,t)=>{t.r(n),t.d(n,{JS_BLOG_CONTENT:()=>i});var l=t(67294),u=(0,l.lazy)((function(){return Promise.all([t.e(7606),t.e(5275)]).then(t.bind(t,35275))})),i=[{id:1,label:"How to get user location.",url:"get-user-location",content:l.createElement(u,null)}]}}]);
