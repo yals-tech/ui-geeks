@@ -414,7 +414,7 @@ export const REACT_LINK = [
   },
   {
     label: 'React Router',
-    link: '/react/react-routes',
+    link: '/react/react-router',
     lastUpdate: '10/20/2022',
     wordCount: 1045,
     tags: [

@@ -73,7 +73,7 @@ export const REACT_ROUTE_PATH: Array<IMenuItem> = [
     group: 'Advanced Concepts'
   },
   {
-    url: `${routePrefix}react-routes`,
+    url: `${routePrefix}react-router`,
     label: 'React Router',
     group: 'Advanced Concepts'
   }
