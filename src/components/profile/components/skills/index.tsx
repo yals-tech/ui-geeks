@@ -30,50 +30,54 @@ const SkillList = () => {
   }, []);
 
   return (
-    <div className='custom-list'>
-      <div className='custom-list-wrapper'>
-        <div className='header-title'>Primary Skills</div>
-        <div className='heading-separator'></div>
-        <div className='cus-list-box'>
-          {skillsList.map((skill: ISkillType) => {
-            return (
-              <div className='cus-list-box-item' key={skill.id}>
-                <div className='cus-list-box-icon align-middle'>
-                  {skill.icon && (
-                    <img
-                      src={skill.icon}
-                      className='skill-icon rounded-circle'
-                      alt={skill.name}
-                    />
-                  )}
-                </div>
-                <div className='w-100 align-middle'>
-                  <div className='custom-list-item-title'>{skill.name}</div>
-                  <div className='custom-list-item-sub-title'>
-                    <div className='progress'>
-                      <div
-                        className='progress-bar'
-                        role='progressbar'
-                        style={{ width: `${skill.percent}%` }}
-                        aria-valuenow={25}
-                        aria-valuemin={0}
-                        aria-valuemax={100}
-                      >
-                        {skill.exp}+ years
+    <>
+      <div className='custom-list'>
+        <div className='custom-list-wrapper'>
+          <div className='header-title'>Primary Skills</div>
+          <div className='heading-separator'></div>
+          <div className='cus-list-box'>
+            {skillsList.map((skill: ISkillType) => {
+              return (
+                <div className='cus-list-box-item' key={skill.id}>
+                  <div className='cus-list-box-icon align-middle'>
+                    {skill.icon && (
+                      <img
+                        src={skill.icon}
+                        className='skill-icon rounded-circle'
+                        alt={skill.name}
+                      />
+                    )}
+                  </div>
+                  <div className='w-100 align-middle'>
+                    <div className='custom-list-item-title'>{skill.name}</div>
+                    <div className='custom-list-item-sub-title'>
+                      <div className='progress'>
+                        <div
+                          className='progress-bar'
+                          role='progressbar'
+                          style={{ width: `${skill.percent}%` }}
+                          aria-valuenow={25}
+                          aria-valuemin={0}
+                          aria-valuemax={100}
+                        >
+                          {skill.exp}+ years
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
+      </div>
 
-        {additionalSkills && (
-          <div className='additional-skills'>
+      {additionalSkills && (
+        <div className='custom-list additional-skills'>
+          <div className='custom-list-wrapper'>
             <div className='header-title'>Additional Skills</div>
             <div className='heading-separator'></div>
-            <div className='additional-skills-box'>
+            <div className='cus-list-box additional-skills-box'>
               {additionalSkills.map((skill: ISkillType, index: number) => {
                 return (
                   <div className='add-skill-item' key={index}>
@@ -98,9 +102,9 @@ const SkillList = () => {
               })}
             </div>
           </div>
-        )}
-      </div>
-    </div>
+        </div>
+      )}
+    </>
   );
 };
 

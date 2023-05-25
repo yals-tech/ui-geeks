@@ -2,12 +2,13 @@ import React, { memo } from 'react';
 import { IProjectConfigType } from '../../../../types/profile-config.types';
 import { getTechImageUrl } from '../../../../util/util';
 import { PROFILE_CONFIG } from '../../config/profile-config';
+import './recent-project.scss';
 
 const projects = PROFILE_CONFIG.PROJECTS;
 
 const RecentProjects = () => {
   return (
-    <div className='custom-list'>
+    <div className='custom-list project-list-box'>
       <div className='custom-list-wrapper'>
         <div className='header-title'>Most Recent Projects</div>
         <div className='heading-separator'></div>

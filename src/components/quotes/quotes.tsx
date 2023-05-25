@@ -30,6 +30,7 @@ const LanguageComponent = () => {
   const [selectedGenre, setSelectedGenre] = useState<string | null>(null);
   const [quotesList, setQuotesList] = useState<Array<IQuote>>(QuotesList);
   const [favoriteList, setFavoriteList] = useState<Array<number | string>>([]);
+  const [swipeVal, setSwipeVal] = useState(0);
 
   let xDown: any = null;
   let yDown: any = null;
@@ -62,31 +63,29 @@ const LanguageComponent = () => {
     yDown = firstTouch.clientY;
   };
 
-  const handleTouchMove = (evt: any) => {
+  function handleTouchMove(evt: any) {
     if (!xDown || !yDown) {
       return;
     }
 
-    var xUp = evt.touches[0].clientX;
-    var yUp = evt.touches[0].clientY;
-
-    var xDiff = xDown - xUp;
-    var yDiff = yDown - yUp;
+    const xUp = evt.touches[0].clientX;
+    const yUp = evt.touches[0].clientY;
+    const xDiff = xDown - xUp;
+    const yDiff = yDown - yUp;
 
     if (Math.abs(xDiff) > Math.abs(yDiff)) {
       if (xDiff > 1) {
         /* right swipe - PREV */
-
-        updateIndex(1);
+        updateIndexFromSwipe(Math.random());
       } else {
         /* left swipe - NEXT */
-        updateIndex(-1);
+        updateIndexFromSwipe(Math.random() * -1);
       }
 
       xDown = null;
       yDown = null;
     }
-  };
+  }
 
   const renderContent = (title: string) => {
     const lines = title.split('~');
@@ -106,8 +105,12 @@ const LanguageComponent = () => {
       });
     }
 
-    if (incrementCtr === 1 && currentIndex < quotesList.length - 1) {
-      setCurrentIndex((prev: number) => prev + 1);
+    if (incrementCtr === 1) {
+      const len = quotesList.length - 1;
+
+      setCurrentIndex((prev: number) => {
+        return prev >= len ? len : prev + 1;
+      });
     }
   };
 
@@ -211,23 +214,23 @@ const LanguageComponent = () => {
     );
   };
 
+  const updateIndexFromSwipe = (val: number) => {
+    setSwipeVal(() => val);
+  };
+
+  useEffect(() => {
+    updateIndex(swipeVal > 0 ? 1 : -1);
+  }, [swipeVal]);
+
   useEffect(() => {
     updateFavItems();
 
-    document.addEventListener('touchstart', handleTouchStart.bind(this), false);
-    document.addEventListener('touchmove', handleTouchMove.bind(this), false);
+    document.addEventListener('touchstart', handleTouchStart, false);
+    document.addEventListener('touchmove', handleTouchMove, false);
 
     return () => {
-      document.removeEventListener(
-        'touchstart',
-        handleTouchStart.bind(this),
-        false
-      );
-      document.removeEventListener(
-        'touchmove',
-        handleTouchMove.bind(this),
-        false
-      );
+      document.removeEventListener('touchstart', handleTouchStart, false);
+      document.removeEventListener('touchmove', handleTouchMove, false);
     };
   }, []);
 

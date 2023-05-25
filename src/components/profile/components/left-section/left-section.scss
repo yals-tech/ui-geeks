@@ -70,3 +70,9 @@
 .theme-dark .content-box:hover {
   background-color: $profile-drkThemeHover !important;
 }
+
+.device-type-mobile {
+  .profile-desc {
+    text-align: justify;
+  }
+}
