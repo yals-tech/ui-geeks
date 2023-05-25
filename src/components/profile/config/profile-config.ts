@@ -420,19 +420,24 @@ export const PROFILE_CONFIG: IProfileConfigType = {
       description: SOCIAL_URL.LINKEDIN,
       isLink: true
     },
-
     {
       id: 4,
+      name: 'Website',
+      description: SOCIAL_URL.WEBSITE,
+      isLink: true
+    },
+    {
+      id: 5,
       name: 'Location',
       description: 'Noida, Uttar Pradesh, India'
     },
     {
-      id: 5,
+      id: 6,
       name: 'Date of Birth',
       description: '11-Apr-1986'
     },
     {
-      id: 6,
+      id: 7,
       name: 'US VISA',
       description: 'B1/B2'
     }

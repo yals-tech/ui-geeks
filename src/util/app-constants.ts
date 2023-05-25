@@ -20,7 +20,8 @@ export const THEME_CONSTANT = {
 };
 
 export const SOCIAL_URL = {
-  LINKEDIN: 'https://www.linkedin.com/in/sunil-kumar-83146843'
+  LINKEDIN: 'https://www.linkedin.com/in/sunil-kumar-83146843',
+  WEBSITE: 'https://ui-geeks.in'
 };
 
 export const PROFILE_URL = '/profile/sunil-kumar';
