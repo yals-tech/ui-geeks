@@ -10,7 +10,7 @@ const LeftSection = () => {
       <div className='content-wrapper'>
         <div className='header-title'>Profile</div>
         <div className='heading-separator'></div>
-        <div className='content-box'>
+        <div className='content-box profile-summary-box'>
           <figure>
             <blockquote className='blockquote'>
               <p className='text-primary'>
