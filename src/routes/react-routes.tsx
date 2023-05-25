@@ -49,7 +49,7 @@ const ReactRoutes = () => {
         <Route path='context' element={<ReactContext />} />
         <Route path='render-props' element={<ReactRenderProps />} />
         <Route path='error-boundary' element={<ReactErrorBoundary />} />
-        <Route path='react-routes' element={<ReactRouterComponents />} />
+        <Route path='react-router' element={<ReactRouterComponents />} />
       </Route>
     </Routes>
   );

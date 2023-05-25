@@ -174,8 +174,17 @@ body {
   line-height: 0;
 }
 
+.no-link {
+  // text-decoration: none;
+  color: $profile-textColor;
+}
+
 .#{$themeDark} {
   background-color: $darkThemeBg;
+
+  .no-link {
+    color: $profile-drkThemeColor !important;
+  }
 
   .#{$appPrefix}-content-section,
   .#{$appPrefix}-home-header {

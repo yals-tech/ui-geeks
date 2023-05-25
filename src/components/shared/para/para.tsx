@@ -4,7 +4,7 @@ import { AppPrefix } from '../../../util/app-constants';
 import './para.scss';
 import { IParaProps } from './para.types';
 const Para = (props: IParaProps) => {
-  const { children, textAlign, marginBottom = '2rem' } = props;
+  const { children, textAlign, marginBottom = '1rem' } = props;
 
   const paraClasses = classNames({ [`${AppPrefix}-para`]: true });
 

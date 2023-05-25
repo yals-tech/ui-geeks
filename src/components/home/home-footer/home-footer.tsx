@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
 import useCurrentPath from '../../../custom-hooks/useCurrentRoute';
-import { AppPrefix } from '../../../util/app-constants';
+import { AppPrefix, PROFILE_URL } from '../../../util/app-constants';
 import { ImagePaths } from '../../../util/image-path-constants';
 import { SOCIAL_LINKS } from '../../../util/url-constants';
 import IconInstagram from '../../icons/icon-instagram';
@@ -104,12 +104,14 @@ const HomeFooter = () => {
           </div>
           {isHomePage && (
             <div className='app-icon'>
-              <img
-                src={ImagePaths.APP_LOGO}
-                alt='UI Geels Logo'
-                width='60px'
-                height='37px'
-              />
+              <Link to={PROFILE_URL}>
+                <img
+                  src={ImagePaths.APP_LOGO}
+                  alt='UI Geels Logo'
+                  width='60px'
+                  height='37px'
+                />
+              </Link>
             </div>
           )}
         </div>

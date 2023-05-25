@@ -1,0 +1,65 @@
+@import '../../../../scss/variables.scss';
+@import '../../../../scss/colors.scss';
+
+.skill-title {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 7px;
+  color: #ac5656;
+}
+
+.skill-icon {
+  width: 40px;
+  height: 40px;
+  float: left;
+  margin-right: 30px;
+}
+
+.additional-skills {
+  display: flex;
+  flex-direction: column;
+  .additional-skills-box {
+    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 50px;
+    flex-basis: content;
+    flex: 1 1 100px;
+
+    .add-skill-item {
+      flex-grow: inherit;
+      display: flex;
+      align-items: center;
+      background-color: $profile-lightGrayAlt;
+      padding: 5px 10px;
+
+      &:hover {
+        background-color: $profile-hoverBgColor;
+        border-radius: 4px;
+      }
+
+      .item-title {
+        font-weight: bold;
+        font-size: 0.8em;
+        margin-bottom: 2px;
+        color: $profile-textColor;
+      }
+    }
+  }
+}
+
+.#{$themeDark} {
+  .additional-skills-box {
+    .add-skill-item {
+      background-color: $profile-drkThemeBgAlt !important;
+
+      &:hover {
+        background-color: $profile-drkThemeHover !important;
+      }
+      .item-title {
+        color: $profile-drkThemeColor !important;
+      }
+    }
+  }
+}

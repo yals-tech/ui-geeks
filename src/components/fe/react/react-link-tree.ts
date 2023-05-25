@@ -151,7 +151,7 @@ export const REACT_LINK = [
     ],
     children: [
       {
-        label: 'Using Props',
+        label: 'Props',
         shortLabel: 'Props'
       },
       {

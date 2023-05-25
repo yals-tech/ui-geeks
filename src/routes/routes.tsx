@@ -23,6 +23,7 @@ const YalsTermsConditions = React.lazy(
     import(`../components/shared/yals-terms-conditions/yals-terms-conditions`)
 );
 const Quotes = lazy(() => import('../components/quotes/quotes'));
+const ProfileComponent = lazy(() => import('../components/profile/profile'));
 
 const AppRouter = (props: any) => {
   const {} = props;
@@ -58,6 +59,11 @@ const AppRouter = (props: any) => {
               />
 
               <Route path='/quotes' element={<Quotes />} />
+              <Route
+                path='/profile/sunil-kumar'
+                element={<ProfileComponent />}
+              />
+
               <Route path='/javascript/*' element={<JSRoutes />} />
               <Route path='/react/*' element={<ReactRoutes />} />
               <Route path='*' element={<p>There's nothing here!</p>} />
