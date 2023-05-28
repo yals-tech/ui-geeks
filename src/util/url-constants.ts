@@ -3,5 +3,6 @@ export const SOCIAL_LINKS = {
   TWITTER: 'https://twitter.com/geeks_ui',
   LINKEDIN:
     'https://www.linkedin.com/in/ui-geeks-india-1bb823254/recent-activity/',
-  INSTAGRAM: 'https://www.instagram.com/ui_geeks_in'
+  INSTAGRAM: 'https://www.instagram.com/ui_geeks_in',
+  SUPPORT_US: '/#/support-us'
 };

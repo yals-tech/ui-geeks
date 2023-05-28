@@ -8,6 +8,7 @@ import { SOCIAL_LINKS } from '../../../util/url-constants';
 import IconInstagram from '../../icons/icon-instagram';
 import IconLinkedin from '../../icons/icon-linkedin';
 import IconTwitter from '../../icons/icon-twitter';
+import ThumbsUpIcon from '../../icons/thumbs-up-icon';
 import { B, I } from '../../shared/util/util';
 import YalsButton from '../../shared/yals-button/yals-button';
 import YalsFlex from '../../shared/yals-flex/yals-flex';
@@ -25,6 +26,15 @@ const SocialIcons = () => {
 
   return (
     <div className='social-info'>
+      <YalsButton
+        noHighlight
+        className='icon-support-us'
+        href={SOCIAL_LINKS.SUPPORT_US}
+        ariaLabel='UI Geeks | Support Us Page'
+      >
+        <ThumbsUpIcon {...iconProps} />
+      </YalsButton>
+
       <YalsButton
         noHighlight
         className='icon-twitter'

@@ -103,7 +103,7 @@ const ReactContentList = [
     content: (
       <>
         <span className='large-quote'>&#10077;</span>User-Defined Components
-        Must Be Capitalized.<span className='large-quote'>&#10078;</span>
+        must be Capitalized.<span className='large-quote'>&#10078;</span>
       </>
     )
   },

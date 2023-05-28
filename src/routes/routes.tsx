@@ -24,6 +24,9 @@ const YalsTermsConditions = React.lazy(
 );
 const Quotes = lazy(() => import('../components/quotes/quotes'));
 const ProfileComponent = lazy(() => import('../components/profile/profile'));
+const SupportComponent = lazy(
+  () => import('../components/support-us/support-us')
+);
 
 const AppRouter = (props: any) => {
   const {} = props;
@@ -63,9 +66,11 @@ const AppRouter = (props: any) => {
                 path='/profile/sunil-kumar'
                 element={<ProfileComponent />}
               />
+              <Route path='/support-us' element={<SupportComponent />} />
 
               <Route path='/javascript/*' element={<JSRoutes />} />
               <Route path='/react/*' element={<ReactRoutes />} />
+
               <Route path='*' element={<p>There's nothing here!</p>} />
             </Routes>
           </div>

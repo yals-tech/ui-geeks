@@ -57,6 +57,10 @@ export const ImagePaths = {
     PROFILE_QR:
       'https://live.staticflickr.com/65535/52927759096_cbe965a8c7_m.jpg'
   },
+  SUPPORT_US: {
+    BUY_ME_COFFEE: `https://live.staticflickr.com/65535/52931936880_6cfa459e93.jpg`,
+    PAYTM: `https://live.staticflickr.com/65535/52931696064_8dc20240e1_z.jpg`
+  },
   TECH: {
     ANGULAR: 'assets/angular.png',
     REACT: 'assets/react.png',

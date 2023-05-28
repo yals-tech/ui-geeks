@@ -12,7 +12,8 @@ const ReactPropsIntro = () => {
       <Heading as='h2'>Props</Heading>
       <Para>
         Props are the input object to the component. It holds all the input
-        values passed to the components.
+        values passed to the components. React components use <I>props</I> to
+        communicate with each other.
       </Para>
 
       <Para>
