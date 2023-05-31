@@ -19,7 +19,7 @@ const historyTimeline: Array<ITimeLineItem> = [
   {
     date: 'Oct, 2015',
     mileStone: 'v0.14',
-    title: 'Splitted main React package into react and read-dom.',
+    title: 'Splitted main React package into react and react-dom.',
     description: 'Added stateless function component syntax.'
   },
   {

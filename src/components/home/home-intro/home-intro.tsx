@@ -3,15 +3,24 @@ import React, { useEffect, useState } from 'react';
 import { AppPrefix } from '../../../util/app-constants';
 import { ImagePaths } from '../../../util/image-path-constants';
 import {
-  default as YalsFlex,
-  default as YALSFlex
+  default as YALSFlex,
+  default as YalsFlex
 } from '../../shared/yals-flex/yals-flex';
 import {
   FlexAlignItemsTypes,
   FlexJustifyContentTypes
 } from '../../shared/yals-flex/yals-flex.types';
 import './home-intro.scss';
-const languagesList = ['JavaScript', 'React', 'Angular', 'CSS', 'SCSS'];
+const languagesList = [
+  'JavaScript',
+  'React',
+  'Angular',
+  'CSS',
+  'SCSS',
+  'TypeScript',
+  'Next.Js',
+  'Node Js'
+];
 const HomeIntro = () => {
   const homeIntro = classNames({ [`${AppPrefix}-home-intro`]: true });
   const [currentIndex, setCurrentIndex] = useState(0);

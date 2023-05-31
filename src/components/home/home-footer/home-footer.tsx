@@ -1,8 +1,8 @@
 import classNames from 'classnames';
 import React, { memo } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import useCurrentPath from '../../../custom-hooks/useCurrentRoute';
-import { AppPrefix, PROFILE_URL } from '../../../util/app-constants';
+import { APP_INFO, AppPrefix, PROFILE_URL } from '../../../util/app-constants';
 import { ImagePaths } from '../../../util/image-path-constants';
 import { SOCIAL_LINKS } from '../../../util/url-constants';
 import IconInstagram from '../../icons/icon-instagram';
@@ -19,9 +19,15 @@ import {
 import './home-footer.scss';
 
 const SocialIcons = () => {
+  const navigate = useNavigate();
+
   const iconProps = {
     width: 20,
     height: 20
+  };
+
+  const onSupportUsClick = () => {
+    navigate(SOCIAL_LINKS.SUPPORT_US);
   };
 
   return (
@@ -29,8 +35,8 @@ const SocialIcons = () => {
       <YalsButton
         noHighlight
         className='icon-support-us'
-        href={SOCIAL_LINKS.SUPPORT_US}
         ariaLabel='UI Geeks | Support Us Page'
+        onClick={onSupportUsClick}
       >
         <ThumbsUpIcon {...iconProps} />
       </YalsButton>
@@ -87,12 +93,9 @@ const HomeFooter = () => {
 
             <div className='intro-text'>
               <div className='intro-text-title'>
-                <B>UI-Geeks is an online learning platform.</B>
+                <B>{APP_INFO.TAG_LINE}</B>
               </div>
-              <I>
-                Learn Core and Advanced Concepts, Blogs, Summary of JavaScript,
-                React, Angular, SCSS, CSS.
-              </I>
+              <I>{APP_INFO.DESC}</I>
             </div>
 
             <div className='privacy-terms'>

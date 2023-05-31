@@ -25,3 +25,8 @@ export const SOCIAL_URL = {
 };
 
 export const PROFILE_URL = '/profile/sunil-kumar';
+
+export const APP_INFO = {
+  TAG_LINE: 'UI-Geeks is an online learning platform.',
+  DESC: 'Learn Core and Advanced Concepts of JavaScript, TypeScript, React, Angular, SCSS, CSS, NodeJs and other UI terminologies.'
+};

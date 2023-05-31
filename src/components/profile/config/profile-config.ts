@@ -105,7 +105,7 @@ export const PROFILE_CONFIG: IProfileConfigType = {
       id: 12,
       name: 'UI Geeks',
       description:
-        'UI-Geeks is an online learning platform. Learn Core and Advanced Concepts, Blogs, Summary of JavaScript, React, Angular, SCSS, CSS.',
+        'UI-Geeks is an online learning platform. Learn Core and Advanced Concepts of JavaScript, TypeScript, React, Angular, SCSS, CSS, NodeJs and other UI terminologies.',
       role: 'Author',
       techStack: ['ReactJs', 'TypeScript', 'SCSS'],
       link: 'https://ui-geeks.in'

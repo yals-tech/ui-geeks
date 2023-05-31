@@ -1,5 +1,4 @@
-import React, { memo } from 'react';
-import useDeviceType from '../../custom-hooks/use-device-type';
+import React, { memo, useState } from 'react';
 import Heading from '../shared/heading/heading';
 import YalsImage from '../shared/yals-image/yals-image';
 
@@ -14,10 +13,15 @@ import { YALSButtonVariantTypes } from '../shared/yals-button/yals-button.types'
 import './support-us.scss';
 
 const SupportComponent = () => {
-  const deviceType = useDeviceType();
+  const [isValidCountry] = useState(false);
   const extCls = classNames({
     [`${AppPrefix}-support-us`]: true
   });
+
+  // useEffect(() => {
+  //   const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+  //   setIsValidCountry(() => timeZone === 'Asia/Calcutta');
+  // });
 
   return (
     <div className={extCls}>
@@ -44,7 +48,7 @@ const SupportComponent = () => {
 
       <hr />
       <Para textAlign='center'>
-        <Heading as='h2'>By becoming a sponsor</Heading>
+        <Heading as='h2'>Become a Sponsor</Heading>
         <Para textAlign='center'>
           You may join us as a sponsor and we'll display your name, logo and
           other details on our website. Please send us mail at below address:
@@ -62,27 +66,31 @@ const SupportComponent = () => {
       <hr />
 
       <Para textAlign='center'>
-        <Heading as='h2'>By Buying a coffee</Heading>
+        <Heading as='h2'>Buy a Coffee</Heading>
         <YalsImage
           imagePath={ImagePaths.SUPPORT_US.BUY_ME_COFFEE}
           alt={'Support us by buying a coffee.'}
-          width='200px'
+          width='160px'
         />
       </Para>
 
-      <hr />
-      <Para textAlign='center'>
-        <Heading as='h2'>By sending money via Paytm</Heading>
-        <div className='text-danger'>
-          Please verify <B>Mobile Number</B> and <B>Name</B> before transferring
-          the money.
-        </div>
-        <YalsImage
-          imagePath={ImagePaths.SUPPORT_US.PAYTM}
-          alt={'Support us by sending money on Paytm.'}
-          width='100%'
-        />
-      </Para>
+      {isValidCountry && (
+        <>
+          <hr />
+          <Para textAlign='center'>
+            <Heading as='h2'>By sending support via Paytm</Heading>
+            <div className='text-danger'>
+              Please verify <B>Mobile Number</B> and <B>Name</B> before
+              transferring the money.
+            </div>
+            <YalsImage
+              imagePath={ImagePaths.SUPPORT_US.PAYTM}
+              alt={'Support us by sending donation on Paytm.'}
+              width='100%'
+            />
+          </Para>
+        </>
+      )}
     </div>
   );
 };

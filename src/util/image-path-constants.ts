@@ -55,11 +55,11 @@ export const ImagePaths = {
   PROFILE: {
     SUNIL: 'assets/sunil.png',
     PROFILE_QR:
-      'https://live.staticflickr.com/65535/52927759096_cbe965a8c7_m.jpg'
+      'https://live.staticflickr.com/65535/52927173627_44e0fbaea7_m.jpg'
   },
   SUPPORT_US: {
     BUY_ME_COFFEE: `https://live.staticflickr.com/65535/52931936880_6cfa459e93.jpg`,
-    PAYTM: `https://live.staticflickr.com/65535/52931696064_8dc20240e1_z.jpg`
+    PAYTM: `assets/sunil-paytm-qr.png`
   },
   TECH: {
     ANGULAR: 'assets/angular.png',

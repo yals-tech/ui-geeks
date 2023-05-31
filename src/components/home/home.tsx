@@ -9,6 +9,7 @@ import { REACT_PRIMARY_ROUTES } from '../fe/react/react-menu-items';
 import HomeIntro from './home-intro/home-intro';
 import './home.scss';
 import LanguageComponent from './language-component/language-component';
+import UpcomingTopicsComponent from './upcoming-topics/upcoming-topics';
 
 const JSContentList = [
   {
@@ -169,6 +170,8 @@ const Home = () => {
           demoComponent={<ReactHomeDemoComponent />}
           demoLink={REACT_PRIMARY_ROUTES.DEMO}
         />
+
+        <UpcomingTopicsComponent />
 
         {/* <LanguageComponent
           title='Angular'

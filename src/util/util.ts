@@ -171,5 +171,8 @@ export const getTechImageUrl = (tech: string) => {
     case 'CSS':
     case 'SCSS':
       return ImagePaths.TECH.CSS;
+
+    default:
+      return '';
   }
 };
