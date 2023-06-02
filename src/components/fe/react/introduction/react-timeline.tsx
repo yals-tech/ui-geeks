@@ -59,19 +59,18 @@ const historyTimeline: Array<ITimeLineItem> = [
     )
   },
   {
-    date: 'Feb, 2017',
-    mileStone: 'v16.8',
-    title: 'Added Hooks',
-    description:
-      'a way to use state and other React features without writing a class'
-  },
-
-  {
     date: 'Oct, 2017',
     mileStone: 'v16.6',
     title: 'Added memo(), lazy()',
     description:
       'React.memo() as an alternative to PureComponent and React.lazy() for code splitting.'
+  },
+  {
+    date: 'Feb, 2017',
+    mileStone: 'v16.8',
+    title: 'Added Hooks',
+    description:
+      'a way to use state and other React features without writing a class'
   },
   {
     date: 'Aug, 2019',
