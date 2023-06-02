@@ -39,6 +39,16 @@ const historyTimeline: Array<ITimeLineItem> = [
     description: 'Separated React-DOM and distributed as separate package.'
   },
   {
+    date: 'Jun, 2017',
+    mileStone: 'v15.6',
+    title: '',
+    description: (
+      <>
+        Added support for <B>CSS variables in style</B> attribute.
+      </>
+    )
+  },
+  {
     date: 'Sep, 2017',
     mileStone: 'v16.0',
     title: '',
@@ -55,16 +65,7 @@ const historyTimeline: Array<ITimeLineItem> = [
     description:
       'a way to use state and other React features without writing a class'
   },
-  {
-    date: 'Jun, 2017',
-    mileStone: 'v15.6',
-    title: '',
-    description: (
-      <>
-        Added support for <B>CSS variables in style</B> attribute.
-      </>
-    )
-  },
+
   {
     date: 'Oct, 2017',
     mileStone: 'v16.6',
