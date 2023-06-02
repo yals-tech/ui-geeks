@@ -66,7 +66,7 @@ const historyTimeline: Array<ITimeLineItem> = [
       'React.memo() as an alternative to PureComponent and React.lazy() for code splitting.'
   },
   {
-    date: 'Feb, 2017',
+    date: 'Feb, 2019',
     mileStone: 'v16.8',
     title: 'Added Hooks',
     description:
