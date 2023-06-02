@@ -59,7 +59,7 @@ const historyTimeline: Array<ITimeLineItem> = [
     )
   },
   {
-    date: 'Oct, 2017',
+    date: 'Oct, 2018',
     mileStone: 'v16.6',
     title: 'Added memo(), lazy()',
     description:
