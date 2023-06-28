@@ -7,6 +7,8 @@ import Heading from '../../../shared/heading/heading';
 import Para from '../../../shared/para/para';
 import Space from '../../../shared/space/space';
 import { B, BI, I, Indent, IU, NewLine } from '../../../shared/util/util';
+import YALSPreface from '../../../shared/yals-preface/yals-preface';
+import { IDescriptionType } from '../../../shared/yals-preface/yals-preface.types';
 import YalsQuestionnaire from '../../../shared/yals-questionnaire/yals-questionnaire';
 import YALSSummary from '../../../shared/yals-summary/yals-summary';
 import { ExceptionHandlingQuestions } from '../questionnaires/exception-questionnaire';
@@ -49,11 +51,31 @@ const summaryItems: Array<IOrderedListItemType> = [
   }
 ];
 
+const prefaceList: Array<IDescriptionType> = [
+  {
+    topic: `Introduction`,
+    description: `Code exceptions can be handled by try…catch…finally statements`
+  },
+  {
+    topic: `try Block`,
+    description: `Contains statements that may throw error`
+  },
+  {
+    topic: `catch Block`,
+    description: `Contains statements that specify how to handle errors`
+  },
+  {
+    topic: `finally Block`,
+    description: `Contains statements to be executed after try and catch statements`
+  }
+];
+
 const JSExceptionHandling = () => {
   useDOMTitle('UI-Geeks: JavaScript | Exception Handling');
 
   return (
     <Container>
+      <YALSPreface list={prefaceList} />
       <Heading>Exception Handling</Heading>
 
       <Para>

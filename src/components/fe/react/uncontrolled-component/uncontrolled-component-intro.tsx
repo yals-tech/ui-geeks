@@ -19,19 +19,31 @@ const ReactUnControlledComponentIntro = () => {
   return (
     <>
       <Heading as='h2'>Uncontrolled Components</Heading>
+
+      <Para>
+        A component with the local <I>state</I> is called an <Space />
+        <B>uncontrolled component</B> because its parent component can't
+        influence its behavior.
+      </Para>
+
+      <Heading as='h3'>Creating Uncontrolled Form Element</Heading>
       <Para>
         Components whose values are not controlled by React, instead are
-        controlled by DOM itself are called <B>"uncontrolled components"</B>.
-        For example, an <I>{`<input type="file" />`}</I> is always an
-        uncontrolled component because its value can only be set by a user, and
-        not programmatically.
+        controlled by DOM itself can be called "uncontrolled components". For
+        example, an <I>{`<input type="file" />`}</I> is always an uncontrolled
+        element because its value can only be set by a user, and not
+        programmatically.
       </Para>
 
       <Para>
         To write an uncontrolled component, instead of writing an event handler
         for every state update, we can <B>use a ref</B> to get form values from
-        the DOM. <BI>Refs</BI> are used to access DOM nodes or React elements in
-        uncontrolled components. React prefers to avoid using <BI>refs</BI> for
+        the DOM.
+      </Para>
+
+      <Para>
+        <BI>Refs</BI> are used to access DOM nodes or React elements in
+        uncontrolled components. React prefers to avoid using <I>refs</I> for
         anything that can be done declaratively.
       </Para>
 

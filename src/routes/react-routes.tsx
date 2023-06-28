@@ -16,9 +16,7 @@ import ReactLists from '../components/fe/react/lists-and-keys/lists';
 import ReactHome from '../components/fe/react/react-home';
 import ReactHomeDemoComponent from '../components/fe/react/react-home-demo-component/react-home-demo-component';
 import ReactRouterComponents from '../components/fe/react/react-router/react-router';
-import ReactRenderProps from '../components/fe/react/render-props/render-props';
 import ReactUnControlledComponent from '../components/fe/react/uncontrolled-component/uncontrolled-component';
-
 const ReactRoutes = () => {
   return (
     <Routes>
@@ -47,7 +45,6 @@ const ReactRoutes = () => {
         <Route path='forms' element={<ReactForms />} />
         <Route path='hooks' element={<ReactHooks />} />
         <Route path='context' element={<ReactContext />} />
-        <Route path='render-props' element={<ReactRenderProps />} />
         <Route path='error-boundary' element={<ReactErrorBoundary />} />
         <Route path='react-router' element={<ReactRouterComponents />} />
       </Route>

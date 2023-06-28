@@ -6,6 +6,8 @@ import Heading from '../../../../shared/heading/heading';
 import Para from '../../../../shared/para/para';
 import Space from '../../../../shared/space/space';
 import { B, BI, I } from '../../../../shared/util/util';
+import YALSPreface from '../../../../shared/yals-preface/yals-preface';
+import { IDescriptionType } from '../../../../shared/yals-preface/yals-preface.types';
 import YalsQuestionnaire from '../../../../shared/yals-questionnaire/yals-questionnaire';
 import YALSSummary from '../../../../shared/yals-summary/yals-summary';
 import { ArrowFunctionQuestions } from '../../questionnaires/arrow-func-questionnaire';
@@ -76,10 +78,26 @@ const summaryItems: Array<IOrderedListItemType> = [
   }
 ];
 
+const prefaceList: Array<IDescriptionType> = [
+  {
+    topic: `Introduction`,
+    description: `Function that retains lexical context, No binding of ‘arguments’ Limitations`
+  },
+  {
+    topic: `Arrow Functions with class`,
+    description: `Declare class fields, bind(), call(), apply()`
+  },
+  {
+    topic: `Arrow Function Evaluation`,
+    description: `Returning Object Literals, Handling Line Breaks, Parsing Order`
+  }
+];
+
 const JSArrowFunctions = () => {
   useDOMTitle('UI-Geeks: JavaScript | Arrow functions');
   return (
     <Container>
+      <YALSPreface list={prefaceList} />
       <Heading>Arrow functions</Heading>
       <Para>
         <JSArrowFunctionsIntro />

@@ -1,0 +1,29 @@
+@import '../../../scss/variables.scss';
+@import '../../../scss/colors.scss';
+
+.#{$appPrefix}-preface {
+  padding: 10px;
+  border: 1px solid $lightGray;
+  border-radius: 4px;
+  margin-bottom: 25px;
+
+  h4.#{$appPrefix}-heading {
+    margin-top: 0;
+  }
+  .item {
+    margin-bottom: 15px;
+
+    &:last-child {
+      margin-bottom: 5px;
+    }
+    .topic {
+      font-weight: bold;
+    }
+
+    .desc {
+      font-style: italic;
+      font-size: 0.9em;
+      color: $boxShadow;
+    }
+  }
+}

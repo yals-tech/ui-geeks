@@ -147,7 +147,9 @@ export const REACT_LINK = [
       'componentDidUpdate()',
       'componentWillUnmount()',
       'getDerivedStateFromError()',
-      'componentDidCatch()'
+      'componentDidCatch()',
+      'Render Props',
+      'Sharing Component State'
     ],
     children: [
       {
@@ -397,13 +399,6 @@ export const REACT_LINK = [
         label: 'Issues using Context'
       }
     ]
-  },
-  {
-    label: 'Render Props',
-    link: '/react/render-props',
-    lastUpdate: '10/20/2022',
-    wordCount: 225,
-    tags: ['Render Props', 'Sharing Component State']
   },
   {
     label: 'Error Boundary',

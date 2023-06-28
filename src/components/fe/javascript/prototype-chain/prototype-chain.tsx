@@ -6,6 +6,8 @@ import Heading from '../../../shared/heading/heading';
 import Para from '../../../shared/para/para';
 import Space from '../../../shared/space/space';
 import { B, BI, I } from '../../../shared/util/util';
+import YALSPreface from '../../../shared/yals-preface/yals-preface';
+import { IDescriptionType } from '../../../shared/yals-preface/yals-preface.types';
 import YalsQuestionnaire from '../../../shared/yals-questionnaire/yals-questionnaire';
 import YALSSummary from '../../../shared/yals-summary/yals-summary';
 import { InheritanceQuestions } from '../questionnaires/inheritance-questionnaire';
@@ -68,11 +70,24 @@ const summaryItems: Array<IOrderedListItemType> = [
   }
 ];
 
+const prefaceList: Array<IDescriptionType> = [
+  {
+    topic: `Introduction`,
+    description: `Inheritance implemented by prototype, null representing the end of chain`
+  },
+  {
+    topic: `Setting Prototype Values`,
+    description: `Set prototype via Object.setPrototypeOf(), Object.create(), class`
+  }
+];
+
 const JSPrototypeChain = () => {
   useDOMTitle('UI-Geeks: JavaScript | Inheritance and the Prototype chain');
 
   return (
     <Container>
+      <YALSPreface list={prefaceList} />
+
       <Heading>Inheritance and the Prototype chain</Heading>
       <Para>
         When it comes to <I>inheritance</I>, JavaScript has only one construct:

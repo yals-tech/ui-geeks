@@ -5,6 +5,8 @@ import Container from '../../../shared/container/container';
 import Heading from '../../../shared/heading/heading';
 import Space from '../../../shared/space/space';
 import { B, BI, I } from '../../../shared/util/util';
+import YALSPreface from '../../../shared/yals-preface/yals-preface';
+import { IDescriptionType } from '../../../shared/yals-preface/yals-preface.types';
 import YALSSummary from '../../../shared/yals-summary/yals-summary';
 import ReactAdditionalHooks from './additional-hooks';
 import ReactBasicHooks from './basic-hooks';
@@ -100,10 +102,30 @@ const summaryItems: Array<IOrderedListItemType> = [
   }
 ];
 
+const prefaceList: Array<IDescriptionType> = [
+  {
+    topic: `What are hooks`,
+    description: `Added in v16.8, use state and lifecycle feature in function component`
+  },
+  {
+    topic: `Rules of hooks`,
+    description: `Used only in function component, at top level, not inside loop or condition`
+  },
+  {
+    topic: `Basic Hooks`,
+    description: `Commonly used hooks, useState(), useEffect(), useContext()`
+  },
+  {
+    topic: `Additional hooks`,
+    description: `For specific cases, useReducer(), useCallback(), useMemo(), useRef(), useImperativeHandle, useLayoutEffect, etc`
+  }
+];
+
 const ReactHooks = () => {
   useDOMTitle('UI-Geeks: React | Hooks');
   return (
     <Container>
+      <YALSPreface list={prefaceList} />
       <Heading>Hooks</Heading>
       <ReactHooksIntro />
       <ReactBasicHooks />

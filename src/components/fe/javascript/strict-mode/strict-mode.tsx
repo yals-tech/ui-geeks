@@ -5,6 +5,8 @@ import Container from '../../../shared/container/container';
 import Heading from '../../../shared/heading/heading';
 import Para from '../../../shared/para/para';
 import { B, BI, I } from '../../../shared/util/util';
+import YALSPreface from '../../../shared/yals-preface/yals-preface';
+import { IDescriptionType } from '../../../shared/yals-preface/yals-preface.types';
 import YalsQuestionnaire from '../../../shared/yals-questionnaire/yals-questionnaire';
 import YALSSummary from '../../../shared/yals-summary/yals-summary';
 import { StrictModeQuestions } from '../questionnaires/strict-mode-questionnaire';
@@ -62,11 +64,27 @@ const summaryItems: Array<IOrderedListItemType> = [
   }
 ];
 
+const prefaceList: Array<IDescriptionType> = [
+  {
+    topic: `Introduction`,
+    description: `Introduced in ES5, is a restricted variant of JavaScript, can co-exist with non-strict mode`
+  },
+  {
+    topic: `Invoking Strict Mode`,
+    description: `'use strict' can be applied to entire script or individual function`
+  },
+  {
+    topic: `Applied Restrictions`,
+    description: `Restrictions are applied on classes, modules, variables, eval(), arguments, etc`
+  }
+];
+
 const JSStrictMode = () => {
   useDOMTitle('UI-Geeks: JavaScript | Strict mode');
 
   return (
     <Container>
+      <YALSPreface list={prefaceList} />
       <Heading>Strict mode</Heading>
       <Para>
         <JSStrictModeIntro />

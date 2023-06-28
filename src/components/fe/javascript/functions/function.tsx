@@ -6,6 +6,8 @@ import Heading from '../../../shared/heading/heading';
 import Para from '../../../shared/para/para';
 import Space from '../../../shared/space/space';
 import { B, BI, I } from '../../../shared/util/util';
+import YALSPreface from '../../../shared/yals-preface/yals-preface';
+import { IDescriptionType } from '../../../shared/yals-preface/yals-preface.types';
 import YalsQuestionnaire from '../../../shared/yals-questionnaire/yals-questionnaire';
 import YALSSummary from '../../../shared/yals-summary/yals-summary';
 import { FunctionQuestions } from '../questionnaires/function-questionnaire';
@@ -88,11 +90,31 @@ const summaryItems: Array<IOrderedListItemType> = [
   }
 ];
 
+const prefaceList: Array<IDescriptionType> = [
+  {
+    topic: `Introduction`,
+    description: `Function Declaration, Function Expression, Function Invocation, arguments, Rest Parameters`
+  },
+  {
+    topic: `Anonymous Functions`,
+    description: `Lambda Functions without name, transient functions`
+  },
+  {
+    topic: `IIFE`,
+    description: `Declaring and Invoking function in a single expression, Self-Executing Functions`
+  },
+  {
+    topic: `Inner Functions`,
+    description: `Nested functions, access parent scopes in child functions`
+  }
+];
+
 const JSFunctions = () => {
   useDOMTitle('UI-Geeks: JavaScript | Functions');
 
   return (
     <Container>
+      <YALSPreface list={prefaceList} />
       <Heading>Functions</Heading>
 
       <Para>

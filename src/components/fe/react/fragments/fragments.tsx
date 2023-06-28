@@ -8,6 +8,8 @@ import Heading from '../../../shared/heading/heading';
 import Para from '../../../shared/para/para';
 import Space from '../../../shared/space/space';
 import { B, BI, I, IU } from '../../../shared/util/util';
+import YALSPreface from '../../../shared/yals-preface/yals-preface';
+import { IDescriptionType } from '../../../shared/yals-preface/yals-preface.types';
 import YALSSummary from '../../../shared/yals-summary/yals-summary';
 
 const summaryItems: Array<IOrderedListItemType> = [
@@ -31,10 +33,22 @@ const summaryItems: Array<IOrderedListItemType> = [
   }
 ];
 
+const prefaceList: Array<IDescriptionType> = [
+  {
+    topic: `Fragments`,
+    description: `Used to return multiple elements, avoiding wrapper hell`
+  },
+  {
+    topic: `Syntax`,
+    description: `<React.Fragment> or <>`
+  }
+];
+
 const ReactFragments = () => {
   useDOMTitle('UI-Geeks: React | Fragments');
   return (
     <Container>
+      <YALSPreface list={prefaceList} />
       <Heading>Fragments</Heading>
       <Para>
         <B>Fragments</B> are used to <B>return multiple elements</B> from a

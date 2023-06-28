@@ -6,6 +6,8 @@ import Heading from '../../../shared/heading/heading';
 import Para from '../../../shared/para/para';
 import Space from '../../../shared/space/space';
 import { B } from '../../../shared/util/util';
+import YALSPreface from '../../../shared/yals-preface/yals-preface';
+import { IDescriptionType } from '../../../shared/yals-preface/yals-preface.types';
 import YalsQuestionnaire from '../../../shared/yals-questionnaire/yals-questionnaire';
 import YALSSummary from '../../../shared/yals-summary/yals-summary';
 import { ObjectQuestions } from '../questionnaires/objects-questionnaire';
@@ -56,11 +58,24 @@ const summaryItems: Array<IOrderedListItemType> = [
   }
 ];
 
+const prefaceList: Array<IDescriptionType> = [
+  {
+    topic: `Introduction`,
+    description: `Group of key-value pairs, constructor method, object literal`
+  },
+  {
+    topic: `Accessing Object Properties`,
+    description: `Dot Notation, Bracket Notation`
+  }
+];
+
 const JSObjects = () => {
   useDOMTitle('UI-Geeks: JavaScript | Objects');
 
   return (
     <Container>
+      <YALSPreface list={prefaceList} />
+
       <Heading>Objects</Heading>
 
       <Para>

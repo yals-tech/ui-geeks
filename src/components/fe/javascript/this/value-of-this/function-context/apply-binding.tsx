@@ -12,10 +12,6 @@ const JSApply = () => {
       <Para>
         This is similar to the <I>call()</I> method, with just one difference
         that arguments are passed as an array.
-        <Space />
-        <I>arguments</I>
-        <Space />
-        provided individually.
       </Para>
 
       <Para>

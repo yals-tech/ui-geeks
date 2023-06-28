@@ -6,6 +6,8 @@ import Heading from '../../../shared/heading/heading';
 import Para from '../../../shared/para/para';
 import Space from '../../../shared/space/space';
 import { B, BI, I } from '../../../shared/util/util';
+import YALSPreface from '../../../shared/yals-preface/yals-preface';
+import { IDescriptionType } from '../../../shared/yals-preface/yals-preface.types';
 import YalsQuestionnaire from '../../../shared/yals-questionnaire/yals-questionnaire';
 import YALSSummary from '../../../shared/yals-summary/yals-summary';
 import { ControlStructureQuestions } from '../questionnaires/control-struc-questionnaire';
@@ -57,11 +59,28 @@ const summaryItems: Array<IOrderedListItemType> = [
   }
 ];
 
+const prefaceList: Array<IDescriptionType> = [
+  {
+    topic: `Introduction`,
+    description: `Conditional and Iteration Statements`
+  },
+  {
+    topic: `Conditional Statements`,
+    description: `if-else, switch-case, Ternary Operator ( ?: )`
+  },
+  {
+    topic: `Iteration Statements`,
+    description: `while, do-while, for, for…of, for…in loops`
+  }
+];
+
 const JSControlStructures = () => {
   useDOMTitle('UI-Geeks: JavaScript | Control Structures');
 
   return (
     <Container>
+      <YALSPreface list={prefaceList} />
+
       <Heading>Control Structures</Heading>
 
       <JSControlStructuresIntro />

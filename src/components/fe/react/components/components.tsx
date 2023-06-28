@@ -10,6 +10,8 @@ import YALSSummary from '../../../shared/yals-summary/yals-summary';
 import ReactClassComponentIntro from '../class-components/class-component-intro';
 import ReactLifeCyclePhases from '../lifecycle/react-phases';
 
+import YALSPreface from '../../../shared/yals-preface/yals-preface';
+import { IDescriptionType } from '../../../shared/yals-preface/yals-preface.types';
 import ReactFunctionComponents from './function-components';
 import ReactProps from './props/props';
 import ReactState from './state/state';
@@ -90,11 +92,44 @@ const summaryItems: Array<IOrderedListItemType> = [
   }
 ];
 
+const prefaceList: Array<IDescriptionType> = [
+  {
+    topic: `What is a Component`,
+    description: `Isolated, reusable building blocks of UI`
+  },
+  {
+    topic: `Function Component`,
+    description: `JavaScript function that takes 'props' as input, returns react element`
+  },
+  {
+    topic: `Class Components`,
+    description: `ES6 class extending React.Component to define a component, render()`
+  },
+  {
+    topic: `Props`,
+    description: `Input values passed to the component, read-only`
+  },
+  {
+    topic: `State`,
+    description: `Local to component, preserves values between renders`
+  },
+  {
+    topic: `Lifecycle Phases`,
+    description: `Mounting, Updating and Unmounting phase`
+  },
+  {
+    topic: `Render Props`,
+    description: `Sharing code using a prop whose value is a function`
+  }
+];
+
 const ReactComponents = () => {
   useDOMTitle('UI-Geeks: React | Components');
 
   return (
     <Container>
+      <YALSPreface list={prefaceList} />
+
       <Heading>Components</Heading>
       <Para>
         Components let us split the UI into independent, reusable pieces, and

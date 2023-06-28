@@ -6,6 +6,8 @@ import Heading from '../../../shared/heading/heading';
 import Para from '../../../shared/para/para';
 import Space from '../../../shared/space/space';
 import { B, BI, I } from '../../../shared/util/util';
+import YALSPreface from '../../../shared/yals-preface/yals-preface';
+import { IDescriptionType } from '../../../shared/yals-preface/yals-preface.types';
 import YalsQuestionnaire from '../../../shared/yals-questionnaire/yals-questionnaire';
 import YALSSummary from '../../../shared/yals-summary/yals-summary';
 import { ThisQuestions } from '../questionnaires/this-questionnaire';
@@ -93,11 +95,35 @@ const summaryItems: Array<IOrderedListItemType> = [
   }
 ];
 
+const prefaceList: Array<IDescriptionType> = [
+  {
+    topic: `Introduction`,
+    description: `Value of 'this' is the property of execution context (Global, function or eval)`
+  },
+  {
+    topic: `Value of this in Global Context`,
+    description: `Context outside of any function, window object in browser, globalThis`
+  },
+  {
+    topic: `Value of this in Function Context`,
+    description: `Depends on how function is called, call(), bind(), apply()`
+  },
+  {
+    topic: `Value of this in Class Context`,
+    description: `It is regular object with non-static members, constructor(), new()`
+  },
+  {
+    topic: `Value of this in Inline Event Handler Context`,
+    description: `this is set to DOM elements`
+  }
+];
+
 const JSThis = () => {
   useDOMTitle('UI-Geeks: JavaScript | The "this" keyword');
 
   return (
     <Container>
+      <YALSPreface list={prefaceList} />
       <Heading>The "this" keyword</Heading>
       <Para>
         In most cases, the value of <BI>this</BI> is determined by how a

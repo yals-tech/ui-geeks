@@ -6,6 +6,8 @@ import Heading from '../../../shared/heading/heading';
 import Para from '../../../shared/para/para';
 import Space from '../../../shared/space/space';
 import { B, I } from '../../../shared/util/util';
+import YALSPreface from '../../../shared/yals-preface/yals-preface';
+import { IDescriptionType } from '../../../shared/yals-preface/yals-preface.types';
 import YalsQuestionnaire from '../../../shared/yals-questionnaire/yals-questionnaire';
 import YALSSummary from '../../../shared/yals-summary/yals-summary';
 import { HoistingQuestions } from '../questionnaires/hoisting-questionnaire';
@@ -41,11 +43,31 @@ const summaryItems: Array<IOrderedListItemType> = [
   }
 ];
 
+const prefaceList: Array<IDescriptionType> = [
+  {
+    topic: `Introduction`,
+    description: `It is a process where declarations are moved to top of the scope`
+  },
+  {
+    topic: `Function Hoisting`,
+    description: `Allows functions to be safely, declarations are hoisted but definitions are not`
+  },
+  {
+    topic: `Variable Hoisting`,
+    description: `Variable declaration is hoisted but not the initialization`
+  },
+  {
+    topic: `Class Hoisting`,
+    description: `Class declaration is hoisted, not initialized by default`
+  }
+];
+
 const JSHoisting = () => {
   useDOMTitle('UI-Geeks: JavaScript | Hoisting');
 
   return (
     <Container>
+      <YALSPreface list={prefaceList} />
       <Heading>Hoisting</Heading>
 
       <Para>

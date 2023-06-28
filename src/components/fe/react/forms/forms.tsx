@@ -12,6 +12,8 @@ import ReactFormDefaultValue from '../components/uncontrolled-component/default-
 import ReactControlledComponentIntro from '../controlled-component/controlled-components-intro';
 import ReactUnControlledComponentIntro from '../uncontrolled-component/uncontrolled-component-intro';
 
+import YALSPreface from '../../../shared/yals-preface/yals-preface';
+import { IDescriptionType } from '../../../shared/yals-preface/yals-preface.types';
 import ReactFormHandlingEvents from './handling-events';
 
 const summaryItems: Array<IOrderedListItemType> = [
@@ -57,11 +59,31 @@ const summaryItems: Array<IOrderedListItemType> = [
   }
 ];
 
+const prefaceList: Array<IDescriptionType> = [
+  {
+    topic: `Uncontrolled Component`,
+    description: `Value is controlled by DOM, refs used to access DOM`
+  },
+  {
+    topic: `Default Values`,
+    description: `Initial value of element in uncontrolled component`
+  },
+  {
+    topic: `When to use Uncontrolled Component`,
+    description: `Managing DOM nodes, integrating with third-party libraries`
+  },
+  {
+    topic: `Handling Events`,
+    description: `Synthetic camelCase event handler functions`
+  }
+];
+
 const ReactForms = () => {
   useDOMTitle('UI-Geeks: React | Forms');
 
   return (
     <Container>
+      <YALSPreface list={prefaceList} />
       <Heading>Forms</Heading>
       <Para>
         HTML form elements work a bit differently from other DOM elements in

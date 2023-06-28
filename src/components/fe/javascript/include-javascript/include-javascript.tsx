@@ -8,6 +8,8 @@ import Para from '../../../shared/para/para';
 import Space from '../../../shared/space/space';
 import { B, BI, Indent, NewLine, ScriptTag } from '../../../shared/util/util';
 import Word from '../../../shared/word/word';
+import YALSPreface from '../../../shared/yals-preface/yals-preface';
+import { IDescriptionType } from '../../../shared/yals-preface/yals-preface.types';
 import YALSQuestionaire from '../../../shared/yals-questionnaire/yals-questionnaire';
 import YALSSummary from '../../../shared/yals-summary/yals-summary';
 import { IncludeScriptQuestions } from '../questionnaires/include-script-questionnaire';
@@ -66,11 +68,36 @@ const summaryItems: Array<IOrderedListItemType> = [
   }
 ];
 
+const prefaceList: Array<IDescriptionType> = [
+  {
+    topic: `How to include JavaScript Code in Webpage`,
+    description: `Include Inline/External Scripts`
+  },
+  {
+    topic: `Script Loading Strategies`,
+    description: `How JavaScript is downloaded, parsed and executed`
+  },
+  {
+    topic: `async`,
+    description: `Download script without blocking page, execute after download, no guarantee of execution sequence`
+  },
+  {
+    topic: `defer`,
+    description: `Download script without blocking page, won’t run until page content loaded, guarantee of execution sequence`
+  },
+  {
+    topic: `Using JavaScript Console`,
+    description: `Use Browser Console, console.log(), REPL`
+  }
+];
+
 const JSInclude = () => {
   useDOMTitle('UI-Geeks: JavaScript | How To Include Code');
 
   return (
     <Container>
+      <YALSPreface list={prefaceList} />
+
       <Heading>How to include JavaScript code in webpage</Heading>
       <Para>
         <Word bold>

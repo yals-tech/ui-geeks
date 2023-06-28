@@ -8,6 +8,8 @@ import Heading from '../../../shared/heading/heading';
 import Para from '../../../shared/para/para';
 import Space from '../../../shared/space/space';
 import { B, BI, I } from '../../../shared/util/util';
+import YALSPreface from '../../../shared/yals-preface/yals-preface';
+import { IDescriptionType } from '../../../shared/yals-preface/yals-preface.types';
 import YALSSummary from '../../../shared/yals-summary/yals-summary';
 import ReactJSXWithChildren from './children-with-jsx';
 import ReactJSXPreventsXSS from './jsx-xss';
@@ -89,11 +91,40 @@ const summaryItems: Array<IOrderedListItemType> = [
   }
 ];
 
+const prefaceList: Array<IDescriptionType> = [
+  {
+    topic: `What is JSX`,
+    description: `Syntax extension to JavaScript, produces React elements`
+  },
+
+  {
+    topic: `Why JSX`,
+    description: `Because rendering logic is inherently coupled with UI`
+  },
+
+  {
+    topic: `Embedding Expressions`,
+    description: `Embedding JS, attributes, childrens`
+  },
+
+  {
+    topic: `JSX Represents Objects`,
+    description: `Babel compiles the JSX to return object`
+  },
+
+  {
+    topic: `Rendering Elements`,
+    description: `Add elements to Virtual DOM, update only what's necessary `
+  }
+];
+
 const ReactJSX = () => {
   useDOMTitle('UI-Geeks: React | JSX');
 
   return (
     <Container>
+      <YALSPreface list={prefaceList} />
+
       <Heading>JSX</Heading>
       <Para>
         It is a syntax extension to JavaScript. JSX may look like a template

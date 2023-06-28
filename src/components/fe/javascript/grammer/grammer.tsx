@@ -6,6 +6,8 @@ import Heading from '../../../shared/heading/heading';
 import Para from '../../../shared/para/para';
 import Space from '../../../shared/space/space';
 import { B, BI, I } from '../../../shared/util/util';
+import YALSPreface from '../../../shared/yals-preface/yals-preface';
+import { IDescriptionType } from '../../../shared/yals-preface/yals-preface.types';
 import YALSQuestionaire from '../../../shared/yals-questionnaire/yals-questionnaire';
 import YALSSummary from '../../../shared/yals-summary/yals-summary';
 import { GrammerQuestions } from '../questionnaires/grammer-questionnaire';
@@ -145,11 +147,36 @@ const summaryItems: Array<IOrderedListItemType> = [
   }
 ];
 
+const prefaceList: Array<IDescriptionType> = [
+  {
+    topic: `Introduction`,
+    description: `JavaScript is case-sensitive, unicode statements separated by semicolon`
+  },
+  {
+    topic: `Comments`,
+    description: `Single/Multi line, HashBang Comments`
+  },
+  {
+    topic: `Variables`,
+    description: `Identifiers, let, const, var, Scope, Naming rules`
+  },
+  {
+    topic: `Hoisting & Type Conversion`,
+    description: `Lift variables to top, Dynamically types implicit and explicit type conversion`
+  },
+  {
+    topic: `Literals`,
+    description: `Represents valid values, Number, String, Boolean, Array, Object and RegExp Literals, String Interpolation`
+  }
+];
+
 const JSGrammer = () => {
   useDOMTitle('UI-Geeks: JavaScript | Grammer and types');
 
   return (
     <Container>
+      <YALSPreface list={prefaceList} />
+
       <Heading>Grammar and types</Heading>
 
       <JSGrammerIntro />

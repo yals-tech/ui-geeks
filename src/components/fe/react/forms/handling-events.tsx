@@ -6,6 +6,7 @@ import Heading from '../../../shared/heading/heading';
 import Para from '../../../shared/para/para';
 import Space from '../../../shared/space/space';
 import { B, BI, I, OrderedList } from '../../../shared/util/util';
+import ReactFormAddEventHandlers from './adding-events-handlers';
 
 const eventDiff: Array<IOrderedListItemType> = [
   {
@@ -29,13 +30,16 @@ const ReactFormHandlingEvents = () => {
   return (
     <>
       <Heading as='h2'>Handling Events</Heading>
+
       <Para>
-        Handling events with React elements is very similar to handling events
-        on DOM elements.
+        We can add event handlers and pass them as a <I>prop</I> to the JSX.
+        Event handlers are the <I>functions</I> that will be triggered in
+        response to interactions like button click, hover, etc.
       </Para>
 
       <Para>
-        There are some syntax differences:
+        Handling events with React elements is very similar to handling events
+        on DOM elements, with some syntax differences:
         <OrderedList unOrdered items={eventDiff} />
       </Para>
 
@@ -83,10 +87,19 @@ const ReactFormHandlingEvents = () => {
 
       <Heading as='h3'>Synthetic Event</Heading>
       <Para>
-        React defines <B>synthetic events</B> according to the <BI>W3C spec</BI>
-        , so we don't need to worry about <B>cross-browser compatibility</B>.
-        React events do not work exactly the same as native events.
+        React defines synthetic events according to the <I>W3C</I> spec, so we
+        don't need to worry about cross-browser compatibility.
       </Para>
+
+      <Para>
+        React events do not work exactly the same as native events. Some React
+        events do not map directly to the browser's native event. For example,
+        in <I>onMouseLeave</I>, <I>e.nativeEvent</I> will point to a <Space />
+        <I>mouseout</I> <Space />
+        event.
+      </Para>
+
+      <ReactFormAddEventHandlers />
     </>
   );
 };

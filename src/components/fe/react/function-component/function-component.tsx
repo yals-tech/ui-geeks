@@ -5,6 +5,8 @@ import Container from '../../../shared/container/container';
 import Heading from '../../../shared/heading/heading';
 import Space from '../../../shared/space/space';
 import { B, BI, I } from '../../../shared/util/util';
+import YALSPreface from '../../../shared/yals-preface/yals-preface';
+import { IDescriptionType } from '../../../shared/yals-preface/yals-preface.types';
 import YALSSummary from '../../../shared/yals-summary/yals-summary';
 import ReactFunctionComponentLifeCycle from './function-comp-lifecycle/function-lifecycle';
 import ReactFunctionComponentIntro from './function-component-intro';
@@ -46,11 +48,32 @@ const summaryItems: Array<IOrderedListItemType> = [
   }
 ];
 
+const prefaceList: Array<IDescriptionType> = [
+  {
+    topic: `Define Function Components`,
+    description: `Define Function component using JavaScript functions`
+  },
+  {
+    topic: `Props to Function Component`,
+    description: `Input values passed to the component, read-only`
+  },
+  {
+    topic: `Adding State to Component`,
+    description: `Local state object of the component, preserves values between renders, useState()`
+  },
+  {
+    topic: `Lifecycle Hooks`,
+    description: `useEffect()`
+  }
+];
+
 const ReactFunctionComponents = () => {
   useDOMTitle('UI-Geeks: React | Class Component');
 
   return (
     <Container>
+      <YALSPreface list={prefaceList} />
+
       <Heading>Function Component</Heading>
       <ReactFunctionComponentIntro />
       <ReactStateAddToFunction />

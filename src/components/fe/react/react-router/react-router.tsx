@@ -5,6 +5,8 @@ import Container from '../../../shared/container/container';
 import Heading from '../../../shared/heading/heading';
 import Space from '../../../shared/space/space';
 import { B, BI, I } from '../../../shared/util/util';
+import YALSPreface from '../../../shared/yals-preface/yals-preface';
+import { IDescriptionType } from '../../../shared/yals-preface/yals-preface.types';
 import YALSSummary from '../../../shared/yals-summary/yals-summary';
 import ReactRouterIntro from './react-router-intro';
 import ReactRouterNavigation from './react-router-navigation';
@@ -108,11 +110,47 @@ const summaryItems: Array<IOrderedListItemType> = [
   }
 ];
 
+const prefaceList: Array<IDescriptionType> = [
+  {
+    topic: `What is React Router`,
+    description: `Routing library, keeps UI in sync with URL`
+  },
+  {
+    topic: `BrowserRouter`,
+    description: `Uses HTML5 history API, follows standard URL structure`
+  },
+  {
+    topic: `HashRouter`,
+    description: `Uses the hash of the URL, prefixed with # symbol`
+  },
+  {
+    topic: `Routes, Route, RoutesConfig, Outlet`,
+    description: `Used to define routes, <Outlet> used to render matched Component`
+  },
+  {
+    topic: `Nested Routes`,
+    description: `Create UI with persistent navigation, changing inner section with URL`
+  },
+  {
+    topic: `Index Route`,
+    description: `Default child route with no path, renders in parent <Outlet>`
+  },
+  {
+    topic: `Navigation`,
+    description: `Changing URL using <Link> or useNavigation()`
+  },
+  {
+    topic: `Sharing Data`,
+    description: `Sharing URL data using useLocation(), useParams(), useSearchParams()`
+  }
+];
+
 const ReactRouterComponents = () => {
   useDOMTitle('UI-Geeks: React | Router');
 
   return (
     <Container>
+      <YALSPreface list={prefaceList} />
       <Heading>React Router</Heading>
       <ReactRouterIntro />
       <ReactRouterRoutes />

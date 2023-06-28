@@ -9,6 +9,8 @@ import Note from '../../../shared/note/note';
 import Para from '../../../shared/para/para';
 import Space from '../../../shared/space/space';
 import { B, BI, I, IU, OrderedList } from '../../../shared/util/util';
+import YALSPreface from '../../../shared/yals-preface/yals-preface';
+import { IDescriptionType } from '../../../shared/yals-preface/yals-preface.types';
 import YALSSummary from '../../../shared/yals-summary/yals-summary';
 
 const summaryItems: Array<IOrderedListItemType> = [
@@ -56,36 +58,60 @@ const notCheckItems: Array<IOrderedListItemType> = [
   }
 ];
 
+const prefaceList: Array<IDescriptionType> = [
+  {
+    topic: `Error Boundary`,
+    description: `React Class Component that catch javascript errors`
+  },
+  {
+    topic: `Error Handling Methods`,
+    description: `componentDidCatch, getDerivedStateFromError()`
+  }
+];
+
 const ReactErrorBoundary = () => {
   useDOMTitle('UI-Geeks: React | Error Boundaries');
 
   return (
     <Container>
+      <YALSPreface list={prefaceList} />
       <Heading>Error Boundaries</Heading>
+
       <Para>
-        A JavaScript error in a part of the UI shouldn't break the whole
-        application. To solve this problem, React 16 introduced the concept of
-        an <B>"error boundary"</B>.
+        By default, if the application throws an error during rendering, it
+        corrupts React's internal state and causes it to <Space />
+        <I>emit cryptic errors</I> on the next render, in response to which,
+        React removes its UI from the screen.
       </Para>
 
       <Para>
-        Error boundaries are React components that <Space />
-        <B>catch JavaScript errors</B> anywhere in their child component tree,
-        <B>log those errors</B>, and <B>display a fallback UI</B> instead of the
-        component tree that crashed. Error boundaries catch errors during
-        <Space /> <I>rendering</I>, in <I>lifecycle methods</I>, and in
-        <Space />
-        <I>constructors</I> of the whole tree below them.
+        React did not provide a way to handle them gracefully in components and
+        could not recover from them. But for better user experience, a
+        JavaScript error in a part of the UI shouldn't break the whole
+        application.
       </Para>
 
       <Para>
-        Error boundaries do NOT catch errors for:
+        To solve this problem, <B>React 16</B> introduced the concept of an
+        <B>"error boundary"</B>. Error boundaries are React <I>class</I>
+        <Space /> components that <B>catch JavaScript errors</B> anywhere in
+        their child component tree, <B>log those errors</B>, and <Space />
+        <B>display a fallback UI</B> instead of the component tree that crashed.
+      </Para>
+
+      <Para>
+        Error boundaries catch errors during rendering, in lifecycle methods,
+        and in <I>constructors</I> of the whole tree below them.
+      </Para>
+
+      <Para>
+        Error boundaries <B>do NOT</B> catch errors for:
         <OrderedList unOrdered items={notCheckItems} />
       </Para>
 
       <Para>
-        A <B>class component</B> becomes an <B>error boundary</B> if it defines
-        either (or both) of the lifecycle methods <Space />
+        A class component becomes an error boundary if it defines either (or
+        both) of the lifecycle methods <Space />
         <BI>static getDerivedStateFromError()</BI> or <Space />
         <BI>componentDidCatch()</BI>. Use <Space />
         <I>static getDerivedStateFromError()</I> to render fallback UI after an

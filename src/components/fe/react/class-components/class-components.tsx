@@ -5,12 +5,15 @@ import Container from '../../../shared/container/container';
 import Heading from '../../../shared/heading/heading';
 import Space from '../../../shared/space/space';
 import { B, BI, I } from '../../../shared/util/util';
+import YALSPreface from '../../../shared/yals-preface/yals-preface';
+import { IDescriptionType } from '../../../shared/yals-preface/yals-preface.types';
 import YALSSummary from '../../../shared/yals-summary/yals-summary';
 import ReactClassComponentLifeCycle from './class-comp-lifecycle/class-comp-lifecycle';
 import ReactClassErrorHandlingMethods from './class-comp-lifecycle/error-handling-methods';
 import ReactClassComponentIntro from './class-component-intro';
 import ReactClassComponentProperties from './class-properties';
 import ReactClassPropsIntro from './class-props';
+import ReactRenderPropsIntro from './render-props-intro';
 
 const summaryItems: Array<IOrderedListItemType> = [
   {
@@ -113,6 +116,53 @@ const summaryItems: Array<IOrderedListItemType> = [
         <Space /> are used for handling errors.
       </>
     )
+  },
+  {
+    label: (
+      <>
+        <B>Render props</B> is a technique to <I>share code</I> between
+        components using a <I>prop</I> which is a <I>function</I>.
+      </>
+    )
+  },
+  {
+    label: (
+      <>
+        It is not required to name the prop as <B>"render"</B>, instead any
+        valid names could be used.
+      </>
+    )
+  }
+];
+
+const prefaceList: Array<IDescriptionType> = [
+  {
+    topic: `Define Class Component`,
+    description: `Define Class component by extending ES6 class with React.Component`
+  },
+  {
+    topic: `Props to Class Component`,
+    description: `Input values passed to the component, read-only`
+  },
+  {
+    topic: `State`,
+    description: `Local to component, preserves values between renders`
+  },
+  {
+    topic: `Component Class Properties`,
+    description: `defaultProps, displayName properties`
+  },
+  {
+    topic: `Component Lifecycle Methods`,
+    description: `constructor, componentDidMount, render, etc`
+  },
+  {
+    topic: `Error Handling Methods`,
+    description: `componentDidCatch, getDerivedStateFromError()`
+  },
+  {
+    topic: `Render Props`,
+    description: `Sharing code using a prop whose value is a function `
   }
 ];
 
@@ -121,14 +171,16 @@ const ReactClassComponents = () => {
 
   return (
     <Container>
+      <YALSPreface list={prefaceList} />
       <Heading>Class Component</Heading>
+
       <ReactClassComponentIntro />
       <ReactClassPropsIntro />
 
       <ReactClassComponentProperties />
       <ReactClassComponentLifeCycle />
       <ReactClassErrorHandlingMethods />
-
+      <ReactRenderPropsIntro />
       <YALSSummary items={summaryItems} />
     </Container>
   );

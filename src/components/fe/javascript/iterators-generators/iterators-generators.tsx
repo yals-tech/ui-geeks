@@ -6,6 +6,8 @@ import Heading from '../../../shared/heading/heading';
 import Para from '../../../shared/para/para';
 import Space from '../../../shared/space/space';
 import { B, BI, I } from '../../../shared/util/util';
+import YALSPreface from '../../../shared/yals-preface/yals-preface';
+import { IDescriptionType } from '../../../shared/yals-preface/yals-preface.types';
 import YalsQuestionnaire from '../../../shared/yals-questionnaire/yals-questionnaire';
 import YALSSummary from '../../../shared/yals-summary/yals-summary';
 import { IteratorQuestions } from '../questionnaires/iterator-questionnaire';
@@ -84,11 +86,32 @@ const summaryItems: Array<IOrderedListItemType> = [
   }
 ];
 
+const prefaceList: Array<IDescriptionType> = [
+  {
+    topic: `Introduction`,
+    description: `This brings the concept of iteration, customizing loop behavior`
+  },
+  {
+    topic: `Iterators`,
+    description: `Object implementing iterator protocol, next(), yield`
+  },
+  {
+    topic: `Generators`,
+    description: `Function to define iterative algorithm, execution is not continuous, function*`
+  },
+  {
+    topic: `Iterables`,
+    description: `Objects which define iteration behavior, @@iterator, return(value)`
+  }
+];
+
 const JSIteratorsGenerators = () => {
   useDOMTitle('UI-Geeks: JavaScript | Iterators and Generators');
 
   return (
     <Container>
+      <YALSPreface list={prefaceList} />
+
       <Heading>Iterators and Generators</Heading>
 
       <Para>

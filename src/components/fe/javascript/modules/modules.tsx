@@ -6,6 +6,8 @@ import Heading from '../../../shared/heading/heading';
 import Para from '../../../shared/para/para';
 import Space from '../../../shared/space/space';
 import { B, BI, I } from '../../../shared/util/util';
+import YALSPreface from '../../../shared/yals-preface/yals-preface';
+import { IDescriptionType } from '../../../shared/yals-preface/yals-preface.types';
 import YalsQuestionnaire from '../../../shared/yals-questionnaire/yals-questionnaire';
 import YALSSummary from '../../../shared/yals-summary/yals-summary';
 import { ModuleQuestions } from '../questionnaires/module-questionnaire';
@@ -98,11 +100,28 @@ const summaryItems: Array<IOrderedListItemType> = [
   }
 ];
 
+const prefaceList: Array<IDescriptionType> = [
+  {
+    topic: `Introduction`,
+    description: `Splitting JavaScript programs into separate modules`
+  },
+  {
+    topic: `export Statement`,
+    description: `Named & Default Export, Renaming, Re-exporting, Aggregation, Wild-Card Export `
+  },
+  {
+    topic: `import Statement`,
+    description: `Named & Default Import, Namespace, Side-Effect import`
+  }
+];
+
 const JSModules = () => {
   useDOMTitle('UI-Geeks: JavaScript | Modules');
 
   return (
     <Container>
+      <YALSPreface list={prefaceList} />
+
       <Heading>JavaScript Modules</Heading>
       <Para>
         <JSModulesIntro />

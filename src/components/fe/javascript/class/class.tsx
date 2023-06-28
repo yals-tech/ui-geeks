@@ -6,6 +6,8 @@ import Heading from '../../../shared/heading/heading';
 import Para from '../../../shared/para/para';
 import Space from '../../../shared/space/space';
 import { B, BI, I, OrderedList } from '../../../shared/util/util';
+import YALSPreface from '../../../shared/yals-preface/yals-preface';
+import { IDescriptionType } from '../../../shared/yals-preface/yals-preface.types';
 import YalsQuestionnaire from '../../../shared/yals-questionnaire/yals-questionnaire';
 import YALSSummary from '../../../shared/yals-summary/yals-summary';
 import { ClassQuestions } from '../questionnaires/class-questionnaire';
@@ -106,11 +108,29 @@ const classDefType = [
     label: 'Class Expression'
   }
 ];
+
+const prefaceList: Array<IDescriptionType> = [
+  {
+    topic: `Introduction`,
+    description: `Class Declaration, Class Expression, class definition is not hoisted, constructor(), static members, binding 'this'`
+  },
+  {
+    topic: `Private Fields`,
+    description: `Declared with '#' prefix, can't be inherited, can't be accessed outside, can't declare and delete in constructor()`
+  },
+  {
+    topic: `Inheritance`,
+    description: `Base/Parent/Inherited classes, Child/Derived classes, MIX-INS`
+  }
+];
+
 const JSClass = () => {
   useDOMTitle('UI-Geeks: JavaScript | Class');
 
   return (
     <Container>
+      <YALSPreface list={prefaceList} />
+
       <Heading>Class</Heading>
       <Para>
         The classes are templates for creating objects. They encapsulate data

@@ -4,6 +4,8 @@ import { IOrderedListItemType } from '../../../../types/common';
 import Container from '../../../shared/container/container';
 import Heading from '../../../shared/heading/heading';
 import { B, I } from '../../../shared/util/util';
+import YALSPreface from '../../../shared/yals-preface/yals-preface';
+import { IDescriptionType } from '../../../shared/yals-preface/yals-preface.types';
 import YALSSummary from '../../../shared/yals-summary/yals-summary';
 import ReactListExample from './list-example';
 import ReactListKeys from './list-keys';
@@ -42,11 +44,23 @@ const summaryItems: Array<IOrderedListItemType> = [
   }
 ];
 
+const prefaceList: Array<IDescriptionType> = [
+  {
+    topic: `Define Lists`,
+    description: `Use JavaScript loops, map(), etc to iterate react elements`
+  },
+  {
+    topic: `Keys`,
+    description: `A string or number that helps react identify item in list, unique among siblings`
+  }
+];
+
 const ReactLists = () => {
   useDOMTitle('UI-Geeks: React | Lists');
 
   return (
     <Container>
+      <YALSPreface list={prefaceList} />
       <Heading>Lists</Heading>
       <ReactListsIntro />
       <ReactListKeys />

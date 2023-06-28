@@ -7,6 +7,8 @@ import Note from '../../../shared/note/note';
 import Para from '../../../shared/para/para';
 import Space from '../../../shared/space/space';
 import { B, BI, I, OrderedList } from '../../../shared/util/util';
+import YALSPreface from '../../../shared/yals-preface/yals-preface';
+import { IDescriptionType } from '../../../shared/yals-preface/yals-preface.types';
 import YALSQuestionaire from '../../../shared/yals-questionnaire/yals-questionnaire';
 import YALSSummary from '../../../shared/yals-summary/yals-summary';
 import { TheTypesQuestions } from '../questionnaires/types-questionnaire';
@@ -113,11 +115,48 @@ const dataTypes: Array<IOrderedListItemType> = [
   }
 ];
 
+const prefaceList: Array<IDescriptionType> = [
+  {
+    topic: `Building blocks of JavaScript: the types`,
+    description: `Number, BigInt, String, Boolean, Function, Object, Symbol, undefined, null, Array, Date, RegExp`
+  },
+  {
+    topic: `Number`,
+    description: `64-bit double precision, store number & floating, octal, hexa-decimal, parseInt(), parseFloat(), isNaN()`
+  },
+  {
+    topic: `String`,
+    description: `Unicode characters, 16-bit, immutable, toUpper(), charAt(), etc`
+  },
+  {
+    topic: `BigInt`,
+    description: `Number with arbitrary precision, BigInt(), append n`
+  },
+  {
+    topic: `Symbol`,
+    description: `Unique, immutable primitive value, Symbol(), Symbol.for(), Symbol.keyFor()`
+  },
+  {
+    topic: `null`,
+    description: `Deliberate non-value, behaves as zero (0)`
+  },
+  {
+    topic: `undefined`,
+    description: `Uninitialized value, behaves as NaN/false`
+  },
+  {
+    topic: `Boolean`,
+    description: `Possible values true and false, logical AND (&&), OR (||) and NOT (!)`
+  }
+];
+
 const JSTypes = () => {
   useDOMTitle('UI-Geeks: JavaScript | Data Types');
 
   return (
     <Container>
+      <YALSPreface list={prefaceList} />
+
       <Heading>Data types</Heading>
 
       <Para>

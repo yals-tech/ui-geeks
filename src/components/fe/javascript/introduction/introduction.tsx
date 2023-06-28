@@ -5,16 +5,35 @@ import Heading from '../../../shared/heading/heading';
 import Para from '../../../shared/para/para';
 import Space from '../../../shared/space/space';
 import { B, BI, I } from '../../../shared/util/util';
+import YALSPreface from '../../../shared/yals-preface/yals-preface';
+import { IDescriptionType } from '../../../shared/yals-preface/yals-preface.types';
 import YALSQuestionaire from '../../../shared/yals-questionnaire/yals-questionnaire';
 import YALSSummary from '../../../shared/yals-summary/yals-summary';
 import { JS_SUMMARY } from '../js-summary-list';
 import { IntroductionQuestions } from '../questionnaires/introduction-questionnaire';
+
+const prefaceList: Array<IDescriptionType> = [
+  {
+    topic: `What is JavaScript`,
+    description: `Lightweight, interpreted, JIT, prototype-based, multi-paradigm, OOPS`
+  },
+  {
+    topic: `Interpreted or JIT Compiled`,
+    description: `Interpreted with JIT Compilation in modern browsers`
+  },
+  {
+    topic: `Features`,
+    description: `First Class Function, Proto-type Based, Multi-paradigm, Single-Threaded, Dynamic Language, Object Oriented, Imperative and Declarative Styles`
+  }
+];
 
 const JSIntroduction = () => {
   useDOMTitle('UI-Geeks: JavaScript | Introduction');
 
   return (
     <Container>
+      <YALSPreface list={prefaceList} />
+
       <Heading>Introduction</Heading>
       <Para>
         JavaScript (JS) is a light-weight,

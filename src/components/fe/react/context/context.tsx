@@ -5,6 +5,8 @@ import Container from '../../../shared/container/container';
 import Heading from '../../../shared/heading/heading';
 import Space from '../../../shared/space/space';
 import { B, BI, I } from '../../../shared/util/util';
+import YALSPreface from '../../../shared/yals-preface/yals-preface';
+import { IDescriptionType } from '../../../shared/yals-preface/yals-preface.types';
 import YALSSummary from '../../../shared/yals-summary/yals-summary';
 import ReactContextAPI from './context-api/context-api';
 import ReactContextIntro from './context-intro';
@@ -70,11 +72,32 @@ const summaryItems: Array<IOrderedListItemType> = [
   }
 ];
 
+const prefaceList: Array<IDescriptionType> = [
+  {
+    topic: `What is Context`,
+    description: `A way to pass props to any child component in tree, without adding at each level`
+  },
+  {
+    topic: `Prop Drilling`,
+    description: `Add prop to every child component in the tree`
+  },
+  {
+    topic: `Context API`,
+    description: `APIs to create and consume Context, createContext(), useContext(), etc`
+  },
+  {
+    topic: `Issues using Context`,
+    description: `Re-renders child below current component, ignoring shouldComponentUpdate()`
+  }
+];
+
 const ReactContext = () => {
   useDOMTitle('UI-Geeks: React | Context');
 
   return (
     <Container>
+      <YALSPreface list={prefaceList} />
+
       <Heading>Context</Heading>
       <ReactContextIntro />
       <ReactContextWhenToUse />

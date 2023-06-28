@@ -6,6 +6,8 @@ import Heading from '../../../shared/heading/heading';
 import Para from '../../../shared/para/para';
 import Space from '../../../shared/space/space';
 import { B, I } from '../../../shared/util/util';
+import YALSPreface from '../../../shared/yals-preface/yals-preface';
+import { IDescriptionType } from '../../../shared/yals-preface/yals-preface.types';
 import YALSQuestionaire from '../../../shared/yals-questionnaire/yals-questionnaire';
 import YALSSummary from '../../../shared/yals-summary/yals-summary';
 import { ArrayQuestions } from '../questionnaires/array-questionnaire';
@@ -51,11 +53,28 @@ const summaryItems: Array<IOrderedListItemType> = [
   }
 ];
 
+const prefaceList: Array<IDescriptionType> = [
+  {
+    topic: `Introduction`,
+    description: `Group of similar/meaningful data, constructor method, array literal`
+  },
+  {
+    topic: `Accessing Array Items`,
+    description: `Zero based index, using loops to iterate array items`
+  },
+  {
+    topic: `Array Methods`,
+    description: `toString(), concat(), join(), pop(), push(), unshift(), shift(), slice(), splice(), sort(), reverse()`
+  }
+];
+
 const JSArrays = () => {
   useDOMTitle('UI-Geeks: JavaScript | Arrays');
 
   return (
     <Container>
+      <YALSPreface list={prefaceList} />
+
       <Heading>Arrays</Heading>
 
       <Para>

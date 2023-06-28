@@ -63,11 +63,6 @@ export const REACT_ROUTE_PATH: Array<IMenuItem> = [
     group: 'Advanced Concepts'
   },
   {
-    url: `${routePrefix}render-props`,
-    label: 'Render Props',
-    group: 'Advanced Concepts'
-  },
-  {
     url: `${routePrefix}error-boundary`,
     label: 'Error Boundary',
     group: 'Advanced Concepts'
