@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yals-tech/ui-geeks.git"
+    "url": "git+https://github.com/skumar-mca/yals.git"
   },
   "keywords": [
     "UI Geeks",
@@ -20,9 +20,9 @@
   "author": "Sunil Kumar",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/yals-tech/ui-geeks/issues"
+    "url": "https://github.com/skumar-mca/yals/issues"
   },
-  "homepage": "https://github.com/yals-tech/ui-geeks",
+  "homepage": "https://github.com/skumar-mca/yals",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
