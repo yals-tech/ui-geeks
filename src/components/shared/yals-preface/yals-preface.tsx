@@ -17,7 +17,7 @@ const YALSPreface = (props: IYalsPrefaceProps) => {
       <Heading as='h4'>We will learn</Heading>
       {list.map((itm: IDescriptionType) => {
         return (
-          <div className='item'>
+          <div className='item' key={itm.topic}>
             <div className='topic'>{itm.topic}</div>
             <div className='desc'>{itm.description}</div>
           </div>

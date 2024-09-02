@@ -7,7 +7,10 @@ import useDeviceType from '../../../custom-hooks/use-device-type';
 import { AppPrefix, DeviceType } from '../../../util/app-constants';
 import TextCarousal from '../../shared/text-carousal/text-carousal';
 import { NewLine } from '../../shared/util/util';
-import YALSButton from '../../shared/yals-button/yals-button';
+import {
+  default as YALSButton,
+  default as YalsButton
+} from '../../shared/yals-button/yals-button';
 import { YALSButtonVariantTypes } from '../../shared/yals-button/yals-button.types';
 import YalsFlex from '../../shared/yals-flex/yals-flex';
 import {
@@ -81,15 +84,16 @@ const LanguageComponent = (props: ILanguageProp) => {
                 </div>
 
                 <NewLine />
-                <YALSButton
-                  variant={YALSButtonVariantTypes.Dark}
-                  outline={false}
+
+                <YalsButton
+                  variant={YALSButtonVariantTypes.Primary}
+                  className='explore-btn'
                   onClick={handleRedirect}
                 >
                   Learn Now
-                </YALSButton>
+                </YalsButton>
 
-                {isMobile && demoLink && (
+                {false && isMobile && demoLink && (
                   <YALSButton
                     variant={YALSButtonVariantTypes.Secondary}
                     onClick={handleRedirectToDemo}

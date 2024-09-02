@@ -8,17 +8,24 @@ import { IUpcomingItemType } from './upcoming-topics.types';
 
 const upcomingTopicList: Array<IUpcomingItemType> = [
   {
-    key: 'typescript',
-    label: 'TypeScript',
-    description: 'TypeScript is JavaScript with syntax for types.',
-    icon: getTechImageUrl('TypeScript'),
-    releaseDate: '31-Jul-2023'
-  },
-  {
     key: 'scss',
     label: 'SCSS',
     description: 'CSS with superpowers.',
-    icon: getTechImageUrl('SCSS')
+    icon: getTechImageUrl('SCSS'),
+    releaseDate: '30-Sep-2024'
+  },
+  {
+    key: 'nextjs',
+    label: 'NextJs',
+    description: 'The React Framework for the Web.',
+    icon: getTechImageUrl('NextJs'),
+    releaseDate: '30-Sep-2024'
+  },
+  {
+    key: 'typescript',
+    label: 'TypeScript',
+    description: 'TypeScript is JavaScript with syntax for types.',
+    icon: getTechImageUrl('TypeScript')
   },
   {
     key: 'angular',

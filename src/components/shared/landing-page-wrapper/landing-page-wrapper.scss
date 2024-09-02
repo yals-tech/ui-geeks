@@ -29,6 +29,78 @@
     }
   }
 
+  .book-box {
+    background-color: white;
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+
+  .book-lover-text {
+    padding-top: 25px;
+    text-align: center;
+
+    .intro {
+      margin-bottom: 10px;
+      font-size: 2em;
+    }
+
+    .explore {
+      font-size: 1.5em;
+      color: #282872;
+    }
+
+    .highlight {
+      color: #282872;
+      font-weight: bold;
+      font-style: italic;
+    }
+  }
+
+  .language-book-section {
+    padding: 100px 35px;
+    .book-info {
+      padding: 10px;
+    }
+    .book-desc {
+      margin-bottom: 25px;
+      max-width: 25%;
+      margin-right: 50px;
+      font-size: 1.2em;
+      color: #888888;
+      line-height: 1.5;
+    }
+
+    .book-type-box {
+      border: 1px solid #eaeaea;
+      padding: 2px;
+      border-radius: 4px;
+      box-shadow: 3px 4px 7px 0px #ececec;
+
+      &:hover {
+        border-color: #9bacf5;
+        box-shadow: 3px 4px 7px 0px #a8b8ff;
+      }
+    }
+
+    img.book-cover {
+      height: 200px;
+      width: 130px;
+      border-radius: 4px;
+
+      transition: transform 1s ease;
+      &:hover {
+        transform: rotate(5deg) scale(1.8);
+      }
+    }
+
+    .book-type {
+      font-style: italic;
+      font-weight: bold;
+      color: rgb(129, 127, 127);
+      margin-bottom: 2px;
+    }
+  }
+
   .js-word-count {
     width: 100%;
     z-index: 0;
@@ -72,6 +144,15 @@
         color: $purple;
         margin-bottom: 10px;
       }
+    }
+  }
+}
+
+.theme-dark {
+  .book-box {
+    background-color: #141414;
+    .book-type-box {
+      box-shadow: 0.3px 4px 7px 0px #2d2d2d;
     }
   }
 }

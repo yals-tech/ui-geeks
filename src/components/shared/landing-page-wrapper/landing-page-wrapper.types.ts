@@ -11,4 +11,5 @@ export interface ILandingPageWrapperProps {
   blogList?: Array<IBlogMenuType>;
   menuTree?: Array<IMenuTreeItemType>;
   customContentMenuTree?: { label: string; children: Array<any> };
+  books?: ReactNode;
 }

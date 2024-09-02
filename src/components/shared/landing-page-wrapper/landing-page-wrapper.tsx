@@ -32,7 +32,8 @@ const LandingPageWrapper = (props: ILandingPageWrapperProps) => {
     children,
     blogList,
     menuTree,
-    customContentMenuTree
+    customContentMenuTree,
+    books
   } = props;
 
   const deviceType = useDeviceType();
@@ -96,6 +97,7 @@ const LandingPageWrapper = (props: ILandingPageWrapperProps) => {
 
           <Para marginBottom='6rem' textAlign={TextAlignTypes.Center}>
             <YalsButton
+              className='explore-btn'
               variant={YALSButtonVariantTypes.Primary}
               onClick={redirectToIntroduction}
               block={deviceType === DeviceType.Mobile}
@@ -127,6 +129,8 @@ const LandingPageWrapper = (props: ILandingPageWrapperProps) => {
             </Para>
           </div>
         </div>
+
+        {<>{books}</>}
       </div>
     </>
   );

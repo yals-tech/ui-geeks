@@ -31,7 +31,7 @@ const YALSSearch = () => {
             placeholder='search...'
             aria-label='search content'
             aria-describedby='search-icon'
-            disabled={true}
+            readOnly
           />
           <InputGroup.Text id='search-icon'>
             <SearchIcon fillColor='white' />

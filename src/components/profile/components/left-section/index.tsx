@@ -14,7 +14,7 @@ const LeftSection = () => {
           <figure>
             <blockquote className='blockquote'>
               <p className='text-primary'>
-                Master of Computer Applications (MCA), 12+ years, React,
+                Master of Computer Applications (MCA), 14+ years, React, NextJs,
                 Angular, Node, MEAN, MERN.
               </p>
             </blockquote>
@@ -22,10 +22,10 @@ const LeftSection = () => {
               <small>
                 Experience in analysis, design and development of client/server,
                 web based and n-tier applications. Expert in developing web
-                applications using
-                <b> React Js</b>,<b> Angular</b>,<b> Redux</b>,<b> NodeJs</b>,
-                <b> ExpressJS</b>,<b> MongoDB</b>,<b> JavaScript</b>,
-                <b> TypeScript</b>,<b> SCSS/SASS/CSS</b>
+                applications using <b> Next Js</b>,<b> React Js</b>,
+                <b> Angular</b>,<b> Redux</b>,<b> NodeJs</b>,<b> ExpressJS</b>,
+                <b> MongoDB</b>,<b> JavaScript</b>,<b> TypeScript</b>,
+                <b> SCSS/SASS/CSS</b>
               </small>
             </div>
           </figure>

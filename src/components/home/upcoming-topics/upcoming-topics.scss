@@ -98,6 +98,13 @@
           background-color: $nodeJsHover;
         }
       }
+
+      .upcoming-item-nextjs {
+        background-color: $nextJsBg;
+        &:hover {
+          background-color: $nextJsHover;
+        }
+      }
     }
   }
 }

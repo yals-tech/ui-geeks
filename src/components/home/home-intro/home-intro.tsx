@@ -1,13 +1,13 @@
 import classNames from 'classnames';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { AppPrefix } from '../../../util/app-constants';
-import { ImagePaths } from '../../../util/image-path-constants';
 import {
   default as YALSFlex,
   default as YalsFlex
 } from '../../shared/yals-flex/yals-flex';
 import {
   FlexAlignItemsTypes,
+  FlexDirectionTypes,
   FlexJustifyContentTypes
 } from '../../shared/yals-flex/yals-flex.types';
 import './home-intro.scss';
@@ -23,73 +23,68 @@ const languagesList = [
 ];
 const HomeIntro = () => {
   const homeIntro = classNames({ [`${AppPrefix}-home-intro`]: true });
-  const [currentIndex, setCurrentIndex] = useState(0);
+  // const [currentIndex, setCurrentIndex] = useState(0);
 
-  const [, setInterval] = useState(0);
+  // const [, setInterval] = useState(0);
 
-  const updateWordIndex = () => {
-    setCurrentIndex((prev: number) => {
-      let nextIndex = 0;
+  // const updateWordIndex = () => {
+  //   setCurrentIndex((prev: number) => {
+  //     let nextIndex = 0;
 
-      if (prev < languagesList.length - 1) {
-        nextIndex = prev + 1;
-      }
+  //     if (prev < languagesList.length - 1) {
+  //       nextIndex = prev + 1;
+  //     }
 
-      return nextIndex;
-    });
-  };
+  //     return nextIndex;
+  //   });
+  // };
 
-  useEffect(() => {
-    const int = window.setInterval(() => {
-      updateWordIndex();
-    }, 3000);
+  // useEffect(() => {
+  //   const int = window.setInterval(() => {
+  //     updateWordIndex();
+  //   }, 3000);
 
-    setInterval(() => int);
+  //   setInterval(() => int);
 
-    return () => {
-      if (int) {
-        window.clearInterval(int);
-      }
-    };
-  }, []);
+  //   return () => {
+  //     if (int) {
+  //       window.clearInterval(int);
+  //     }
+  //   };
+  // }, []);
 
   return (
     <>
       <YALSFlex
         className={homeIntro}
-        justifyContent={FlexJustifyContentTypes.SpaceAround}
+        justifyContent={FlexJustifyContentTypes.Center}
         alignItems={FlexAlignItemsTypes.Center}
       >
         <YalsFlex
-          justifyContent={FlexJustifyContentTypes.Center}
+          justifyContent={FlexJustifyContentTypes.FlexStart}
           alignItems={FlexAlignItemsTypes.Center}
+          flexDirection={FlexDirectionTypes.Column}
           className='bg-image'
         >
-          <img
-            src={ImagePaths.APP_IMAGE_WEBP}
-            alt='ui-geeks background'
-            width={'100%'}
-            height={'100%'}
-          />
-        </YalsFlex>
+          <div className='site-name ui-geeks-name'>
+            <span className='ui'>UI</span>
+            <span className='geeks'>Geeks</span>
+          </div>
 
-        <YALSFlex
-          justifyContent={FlexJustifyContentTypes.Center}
-          alignItems={FlexAlignItemsTypes.Center}
-          className='intro-section'
-        >
-          <div>
+          <div className='intro-section'>
             <h1 className={`${AppPrefix}-name`}>UI Learning Platform</h1>
-            <h2 className={`${AppPrefix}-sub-name`}>
-              <span className={`${AppPrefix}-animate-top`} key={currentIndex}>
-                {languagesList[currentIndex]}
-              </span>
-            </h2>
+
             <h3 className={`${AppPrefix}-tagline`}>
               "Let's understand UI better"
             </h3>
+
+            {/* <h2 className={`${AppPrefix}-sub-name`}>
+              <span className={`${AppPrefix}-animate-top`} key={currentIndex}>
+                {languagesList[currentIndex]}
+              </span>
+            </h2> */}
           </div>
-        </YALSFlex>
+        </YalsFlex>
       </YALSFlex>
     </>
   );

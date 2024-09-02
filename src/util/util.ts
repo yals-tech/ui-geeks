@@ -1,5 +1,6 @@
 import { IMenuItem } from '../components/shared/navigation-menu/navigation-menu.types';
-import { DeviceType, THEME_CONSTANT } from './app-constants';
+import { IPDFBookViewerItemType } from '../components/shared/pdf-book-viewer/pdf-book-viewer';
+import { BOOK_LINKS, DeviceType, THEME_CONSTANT } from './app-constants';
 import { ImagePaths } from './image-path-constants';
 
 export const getOnPageItems = (currentPath: string, allItems: Array<any>) => {
@@ -172,7 +173,32 @@ export const getTechImageUrl = (tech: string) => {
     case 'SCSS':
       return ImagePaths.TECH.CSS;
 
+    case 'NextJs':
+      return ImagePaths.TECH.NEXTJS;
+
     default:
       return '';
   }
+};
+
+export const getChapterPDFUrl = (currentPath: string) => {
+  if (!currentPath) {
+    return null;
+  }
+
+  let url = null;
+  const allChapters = [
+    ...BOOK_LINKS.REACT.CHAPTERS,
+    ...BOOK_LINKS.JAVASCRIPT.CHAPTERS
+  ];
+
+  url = allChapters.find((chapter: IPDFBookViewerItemType) => {
+    if (Array.isArray(chapter.id)) {
+      return chapter.id.includes(currentPath);
+    }
+
+    return chapter.id === currentPath;
+  });
+
+  return url;
 };

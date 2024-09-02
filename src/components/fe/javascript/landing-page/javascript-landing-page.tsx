@@ -5,6 +5,7 @@ import Para from '../../../shared/para/para';
 import Space from '../../../shared/space/space';
 import { B } from '../../../shared/util/util';
 import { JS_BLOG_LINK } from '../blogs/js-blog-link-tree';
+import JSBooks from '../javascript-books';
 import { JSLINK } from '../js-link-tree';
 import { getJSGroupedMenu, JS_routePrefix } from '../js-menu-items';
 
@@ -33,6 +34,7 @@ const JSLandingPage = () => {
       title='JavaScript'
       wordCloudUrl={ImagePaths.JS.JS_WORD_CLOUD}
       blogList={JS_BLOG_LINK}
+      books={<JSBooks />}
     >
       <Para>
         JavaScript (JS) is a light-weight,

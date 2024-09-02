@@ -16,6 +16,11 @@ export const ImagePaths = {
     'https://live.staticflickr.com/65535/52364579558_8a4611e2bb_b.jpg',
   Asyn_Script_Loading: `https://live.staticflickr.com/65535/52363415682_f03614832b_b.jpg`,
   JS_WORD_CLOUD: `https://live.staticflickr.com/65535/52383011714_14b54b9e25_b.jpg`,
+  HOME_IMAGE: `https://live.staticflickr.com/65535/53963381631_eba0e4f585_k.jpg`,
+  NOTION_PRESS_ICON:
+    'https://live.staticflickr.com/65535/53963794831_965e2cd1d8_q.jpg',
+  KINDLE_ICON:
+    'https://live.staticflickr.com/65535/53964240340_5d3998ce6b_t.jpg',
   JS: {
     ICON: 'images/js-icon_100_100.png',
     LOGO: 'https://live.staticflickr.com/65535/52364799530_6b19c52df1_c.jpg',
@@ -32,7 +37,11 @@ export const ImagePaths = {
         PERMISSION_POPUP:
           'https://live.staticflickr.com/65535/52429844256_eb4d9579d2_z.jpg'
       }
-    }
+    },
+    BOOK_KINDLE:
+      'https://live.staticflickr.com/65535/53963691886_faafede619_w.jpg',
+    BOOK_NOTION:
+      'https://live.staticflickr.com/65535/53962801047_21b534c059.jpg'
   },
   REACT: {
     ICON: 'images/react-icon_100_100.png',
@@ -50,7 +59,9 @@ export const ImagePaths = {
     KEY_FEATURES:
       'https://live.staticflickr.com/65535/52401413342_c4cd881f2c_z.jpg',
     WORD_CLOUD:
-      'https://live.staticflickr.com/65535/52403185702_1f4fbdbddd_c.jpg'
+      'https://live.staticflickr.com/65535/52403185702_1f4fbdbddd_c.jpg',
+    BOOK_KINDLE:
+      'https://live.staticflickr.com/65535/53963692201_8faae0d77c.jpg'
   },
   PROFILE: {
     SUNIL: 'assets/sunil.png',
@@ -74,7 +85,8 @@ export const ImagePaths = {
     EXPRESS_JS: 'assets/express.png',
     MONGO_DB: 'assets/mongodb.png',
     AWS: 'assets/aws-icon.png',
-    DOT_NET: 'assets/dotnet_api.png'
+    DOT_NET: 'assets/dotnet_api.png',
+    NEXTJS: 'assets/nextjs.png'
   },
   COMPANY: {
     FISERV: 'assets/fiserv.png',

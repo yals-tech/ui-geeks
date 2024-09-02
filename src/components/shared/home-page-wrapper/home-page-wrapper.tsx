@@ -1,18 +1,21 @@
-import React, { memo, Suspense, useEffect, useState } from 'react';
+import React, { memo, Suspense, useEffect, useMemo, useState } from 'react';
 import Col from 'react-bootstrap/esm/Col';
 import Row from 'react-bootstrap/esm/Row';
 import useDeviceType from '../../../custom-hooks/use-device-type';
 import useQTextScroll from '../../../custom-hooks/use-qtext-scroll';
 import useCurrentPath from '../../../custom-hooks/useCurrentRoute';
 import { AppPrefix, DeviceType } from '../../../util/app-constants';
-import { getOnPageItems } from '../../../util/util';
+import { getChapterPDFUrl, getOnPageItems } from '../../../util/util';
 import ListIcon from '../../icons/list-icon';
 import ContentLoader from '../../shared/content-loader/content-loader';
 import NavigationMenu from '../../shared/navigation-menu/navigation-menu';
 import NextPrevButtons from '../../shared/next-prev-btn/next-prev-btn';
 import ScrollTopButton from '../../shared/scroll-top-btn/scroll-top-btn';
 import YALSBreadcrumb from '../../shared/yals-breadcrumb/yals-breadcrumb';
-import YALSButton from '../../shared/yals-button/yals-button';
+import {
+  default as YALSButton,
+  default as YalsButton
+} from '../../shared/yals-button/yals-button';
 import { YALSButtonVariantTypes } from '../../shared/yals-button/yals-button.types';
 import {
   default as YalsFlex,
@@ -26,6 +29,7 @@ import {
 import YALSModal from '../../shared/yals-modal/yals-modal';
 import Container from '../container/container';
 import OnPageItems from '../on-page-items/on-page-items';
+import PDFBookViewer from '../pdf-book-viewer/pdf-book-viewer';
 import YALSShare from '../yals-share/yals-share';
 import YALSTopicInfo from '../yals-topic-info/yals-topic-info';
 import { IHomePageWrapperProps } from './home-page-wrapper.types';
@@ -107,8 +111,14 @@ const HomePageWrapper = (props: IHomePageWrapperProps) => {
   const deviceType = useDeviceType();
   useQTextScroll();
 
+  const [viewMode, setViewMode] = useState('HTML');
+
   const [showMenu, setShowMenu] = useState(false);
   const [hasSubMenu, setHasSubMenu] = useState(false);
+
+  const toggleViewMode = () => {
+    setViewMode((prev: string) => (prev === 'HTML' ? 'PDF' : 'HTML'));
+  };
 
   const toggleMenu = () => {
     setShowMenu((prev: boolean) => !prev);
@@ -146,6 +156,10 @@ const HomePageWrapper = (props: IHomePageWrapperProps) => {
   }, [closeMobileMenuCtr]);
 
   const currentLinkItem = getCurrentRouteMenu();
+
+  const chapterPDFUrl = useMemo(() => {
+    return getChapterPDFUrl(currentPath);
+  }, [currentPath]);
 
   return (
     <Row className={`terminology-${language}`}>
@@ -227,7 +241,44 @@ const HomePageWrapper = (props: IHomePageWrapperProps) => {
           />
         )}
 
-        <Suspense fallback={<ContentLoader />}>{children}</Suspense>
+        {chapterPDFUrl && (
+          <YalsButton onClick={toggleViewMode} className='float-right'>
+            <YalsFlex
+              alignItems={FlexAlignItemsTypes.Center}
+              className='read-pdf'
+            >
+              <img
+                src='images/pdf.png'
+                height='40'
+                width='40'
+                alt='View in PDF'
+                className={`mr-1 toggle-img ${
+                  viewMode === 'HTML' ? 'disabled-image' : ''
+                }`}
+                title='View PDF version'
+              />
+
+              <img
+                src='images/html.png'
+                height='40'
+                width='40'
+                alt='View in HTML'
+                title='View HTML/Web version'
+                className={`toggle-img ${
+                  viewMode === 'PDF' ? 'disabled-image' : ''
+                }`}
+              />
+            </YalsFlex>
+          </YalsButton>
+        )}
+
+        <Suspense fallback={<ContentLoader />}>
+          {viewMode === 'HTML' ? (
+            children
+          ) : (
+            <PDFBookViewer url={chapterPDFUrl?.url} />
+          )}
+        </Suspense>
 
         {deviceType === DeviceType.Mobile && customMenuContent && (
           <>{customMenuContent}</>

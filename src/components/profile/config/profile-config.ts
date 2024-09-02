@@ -14,15 +14,23 @@ export const PROFILE_CONFIG: IProfileConfigType = {
   PROJECTS: [
     {
       id: 1,
-      name: 'File Exchange - XR',
+      name: 'Lantern',
       description:
-        'File Exchange leverages four decades of transmission and translation expertise to provide the most robust data delivery and transformation tool available. With File Exchange, banks can eliminate the hassles of installing software, managing servers, designing networks.',
+        'Lantern is powered by Labaton Keller Sucharow, a national litigation firm offering complex litigation and alternative dispute resolution services. Labaton Keller Sucharow’s successful reputation is built on its diverse team of more than 70 attorneys, investigators, financial analysts, and forensic accountants.',
       role: 'UI Architect',
-      techStack: ['ReactJs', 'Redux', 'TypeScript', 'SCSS'],
+      techStack: ['NextJs', 'ReactJs', 'Redux', 'TypeScript', 'SCSS'],
       rolesAndResponsibilities: responsibilities
     },
     {
       id: 2,
+      name: 'File Exchange - XR',
+      description:
+        'File Exchange leverages four decades of transmission and translation expertise to provide the most robust data delivery and transformation tool available. With File Exchange, banks can eliminate the hassles of installing software, managing servers, designing networks.',
+      role: 'UI Architect',
+      techStack: ['ReactJs', 'Redux', 'TypeScript', 'SCSS']
+    },
+    {
+      id: 3,
       name: 'Payments Exchange - RTP',
       description:
         'With the use of RTP, banks can now rapidly onboard new customer while providing existing customer an expanded suite of payments options, including real time payments.',
@@ -30,7 +38,7 @@ export const PROFILE_CONFIG: IProfileConfigType = {
       techStack: ['ReactJs', 'Redux', 'TypeScript', 'SCSS']
     },
     {
-      id: 3,
+      id: 4,
       name: 'Enterprise Payment Platform',
       description:
         'EPP UI is the modern UI for handling all types of payments. ',
@@ -38,7 +46,7 @@ export const PROFILE_CONFIG: IProfileConfigType = {
       techStack: ['ReactJs', 'TypeScript', 'Redux', 'SCSS']
     },
     {
-      id: 4,
+      id: 5,
       name: 'CSCS',
       description:
         'CSCS cards provide proof that individuals working on construction sites have the appropriate training and qualifications for the job they do on site. By ensuring the workforce are appropriately qualified the card plays its part in improving standards and safety on UK construction sites',
@@ -46,7 +54,7 @@ export const PROFILE_CONFIG: IProfileConfigType = {
       techStack: ['Angular', 'TypeScript', 'NodeJs', 'AWS', 'CSS']
     },
     {
-      id: 5,
+      id: 6,
       name: 'ASTM',
       description:
         'ASTM International, formerly known as American Society for Testing and Materials, is an international standards organization that develops and publishes voluntary consensus technical standards for a wide range of materials, products, systems, and services.',
@@ -54,7 +62,7 @@ export const PROFILE_CONFIG: IProfileConfigType = {
       techStack: ['ReactJs', 'TypeScript', 'NodeJs', 'SCSS']
     },
     {
-      id: 6,
+      id: 7,
       name: 'MyBI',
       description:
         'MyBI Portal is a one stop web application which allows AT&T staff to search documents shared across multiple source systems. Users can also subscribe any document and if that document has any change, it gets notified to the user.',
@@ -62,7 +70,7 @@ export const PROFILE_CONFIG: IProfileConfigType = {
       techStack: ['ReactJs', 'NodeJs', 'JavaScript', 'CSS']
     },
     {
-      id: 7,
+      id: 8,
       name: 'CityNet',
       description:
         'NLT is one of the biggest Internet Service provider of Singapore. Users can request for new connection with their convenient time, and then they can track the progress of that request.',
@@ -70,7 +78,7 @@ export const PROFILE_CONFIG: IProfileConfigType = {
       techStack: ['ReactJs', 'TypeScript', 'Redux', 'CSS']
     },
     {
-      id: 8,
+      id: 9,
       name: 'XPO Logistics',
       description:
         'XPO Logistics is one of the largest logistics companies of US. This product is to provide a high-end system to enhance their day to day activities.',
@@ -78,7 +86,7 @@ export const PROFILE_CONFIG: IProfileConfigType = {
       techStack: ['Angular', 'TypeScript', 'Web API', 'CSS']
     },
     {
-      id: 9,
+      id: 10,
       name: 'Amdocs Academy',
       description:
         'Amdocs Academy is an innovative cloud learning portal providing a personalized role and scenario-based learning experience that improves employee performance.',
@@ -86,7 +94,7 @@ export const PROFILE_CONFIG: IProfileConfigType = {
       techStack: ['Angular Js', 'JavaScript', 'Web API', 'CSS']
     },
     {
-      id: 10,
+      id: 11,
       name: 'Axalta Coating System',
       description:
         'Axalta is the second largest powder coating solution in the world. Integrated online system, manages scheduling, exacting, dispatching and other activities.',
@@ -94,7 +102,7 @@ export const PROFILE_CONFIG: IProfileConfigType = {
       techStack: ['Angular Js', 'JavaScript', 'Web API', 'CSS']
     },
     {
-      id: 11,
+      id: 12,
       name: 'erail.in',
       description:
         'Service oriented website exploring the trains of Indian Railways. Train route, seat availability and other features were the USP of the service.',
@@ -102,7 +110,7 @@ export const PROFILE_CONFIG: IProfileConfigType = {
       techStack: ['JQuery', 'JavaScript', 'CSS']
     },
     {
-      id: 12,
+      id: 13,
       name: 'UI Geeks',
       description:
         'UI-Geeks is an online learning platform. Learn Core and Advanced Concepts of JavaScript, TypeScript, React, Angular, SCSS, CSS, NodeJs and other UI terminologies.',
@@ -137,6 +145,15 @@ export const PROFILE_CONFIG: IProfileConfigType = {
     },
     {
       id: 2,
+      name: 'NextJs',
+      icon: ImagePaths.TECH.NEXTJS,
+      duration: 6,
+      since: 2015,
+      exp: 1.5,
+      percent: 0
+    },
+    {
+      id: 3,
       name: 'Angular',
       icon: ImagePaths.TECH.ANGULAR,
       duration: 6,
@@ -145,7 +162,7 @@ export const PROFILE_CONFIG: IProfileConfigType = {
       percent: 0
     },
     {
-      id: 3,
+      id: 4,
       name: 'JavaScript',
       icon: ImagePaths.TECH.JS,
       duration: 11,
@@ -154,7 +171,7 @@ export const PROFILE_CONFIG: IProfileConfigType = {
       percent: 0
     },
     {
-      id: 4,
+      id: 5,
       name: 'TypeScript',
       icon: ImagePaths.TECH.TS,
       duration: 4,
@@ -163,7 +180,7 @@ export const PROFILE_CONFIG: IProfileConfigType = {
       percent: 0
     },
     {
-      id: 5,
+      id: 6,
       name: 'CSS/SCSS',
       icon: ImagePaths.TECH.CSS,
       duration: 5,
@@ -172,7 +189,7 @@ export const PROFILE_CONFIG: IProfileConfigType = {
       percent: 0
     },
     {
-      id: 6,
+      id: 7,
       name: 'Bootstrap',
       icon: ImagePaths.TECH.BOOTSTRAP,
       duration: 5,
@@ -181,7 +198,7 @@ export const PROFILE_CONFIG: IProfileConfigType = {
       percent: 0
     },
     {
-      id: 7,
+      id: 8,
       name: 'JQuery',
       icon: ImagePaths.TECH.JQUERY,
       duration: 10,
@@ -190,7 +207,7 @@ export const PROFILE_CONFIG: IProfileConfigType = {
       percent: 0
     },
     {
-      id: 8,
+      id: 9,
       name: 'Node Js',
       icon: ImagePaths.TECH.NODE,
       duration: 5,
@@ -199,7 +216,7 @@ export const PROFILE_CONFIG: IProfileConfigType = {
       percent: 0
     },
     {
-      id: 9,
+      id: 10,
       name: 'Express Js',
       icon: ImagePaths.TECH.EXPRESS_JS,
       duration: 8,
@@ -208,7 +225,7 @@ export const PROFILE_CONFIG: IProfileConfigType = {
       percent: 0
     },
     {
-      id: 10,
+      id: 11,
       name: 'MongoDB',
       icon: ImagePaths.TECH.MONGO_DB,
       duration: 5,
@@ -245,6 +262,9 @@ export const PROFILE_CONFIG: IProfileConfigType = {
     },
     {
       name: 'AJAX'
+    },
+    {
+      name: 'Tailwind CSS'
     },
     {
       name: 'CSS Flex Box'

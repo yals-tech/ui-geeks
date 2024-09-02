@@ -40,7 +40,10 @@ const HomeHeader = (props: any) => {
                   className='app-logo'
                 />
 
-                <div className='app-name'>UI Geeks</div>
+                <div className='app-name ui-geeks-name'>
+                  <span className='ui'>UI</span>{' '}
+                  <span className='geeks'>Geeks</span>
+                </div>
               </Link>
             </li>
           </ul>
